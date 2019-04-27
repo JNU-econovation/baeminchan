@@ -2,6 +2,7 @@ package codesquad.exception;
 
 import codesquad.exception.account.CannotRegistrationException;
 import codesquad.exception.account.UnAuthenticationException;
+import codesquad.exception.account.UnAuthorizedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -51,13 +52,19 @@ public class ExceptionResponseEntityExceptionHandler {
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(URI.create("member/login"));
         log.debug("UnAuthenticationException is happened!");
-        return new ResponseEntity<>(exceptionResponse, headers, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(exceptionResponse, headers, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(EntityNotFoundException.class)
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public void emptyResultData() {
         log.debug("EntityNotFoundException is happened!");
+    }
+
+    @ExceptionHandler(UnAuthorizedException.class)
+    @ResponseStatus(value = HttpStatus.FORBIDDEN)
+    public void unAuthorized() {
+        log.debug("UnAuthorizedException is happened!");
     }
 
 }

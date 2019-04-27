@@ -9,7 +9,7 @@
 * [텍스트와 이미지로 살펴보는 코드스쿼드의 온라인 코드 리뷰 과정](https://github.com/code-squad/codesquad-docs/blob/master/codereview/README.md)
 * [동영상으로 살펴보는 코드스쿼드의 온라인 코드 리뷰 과정](https://youtu.be/a5c9ku-_fok)
 
-# 학습내용
+# STEP1 학습내용 
 
 ## spring security 인증범위 설정
 - https://gs.saro.me/dev?page=20&tn=480
@@ -77,6 +77,13 @@
 ## NotEmpty vs NotNull vs NotBlank
 - http://wonwoo.ml/index.php/post/520
 
+## Regex
+- 정규식 기본
+    - http://www.nextree.co.kr/p4327/
+- 기본 정규식 소스
+    - https://epthffh.tistory.com/entry/%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8-%EC%A0%95%EA%B7%9C%EC%8B%9D 
+    
+    
 # Javascript 
 
 ## JS문법
@@ -96,3 +103,54 @@
 - ajax fetch 설명
     - https://gs.saro.me/dev?tn=564
     
+    
+# STEP2 학습내용 
+
+- Lombok 빌더패턴
+    - [빌더 사용 및 기본값 설정방법](https://tomining.tistory.com/180)
+    - 의문사항 : 어째서 lombok의 빌더패턴을 사용할땐 Jackson 매핑을 위한 noArgsConstructor을 생성하지 않아도 되는가.
+    - 의문사항 : 어째서 @NoArgsConstructor를 사용해주면, @AllArgsConstructor도 같이 붙여햐 하는가.
+    
+    
+- 계층구조의 데이터 (recursive query)
+    - [오라클 : START WITH CONNECT BY 구문에 대한 이해](http://playdata.io/tutorials/sql/%EC%98%A4%EB%9D%BC%ED%81%B4-start-with-connect-by)
+    - [단일테이블의 Tree 구조를 위한 Self Join](https://eclipse4j.tistory.com/211)
+    - [Create a Tree using JPA](https://stackoverflow.com/questions/14388037/create-a-tree-using-jpa)
+    
+- JPA CASCADE
+    - [JPA 영속성 전이 개념](http://wonwoo.ml/index.php/post/1002)
+    - [Orphan Removal vs Cascade Delete](https://agritsik.wordpress.com/2015/08/06/orphan-removal-vs-cascade-delete-or-how-to-delete-related-entities/)
+    
+- Docker Mysql 
+    - 한글깨짐현상
+        - ~~[컨테이너 생성시 설정으로 해결](http://epr.pe.kr/wordpress/?p=553)~~ -> 컨테이너가 생성되지 않는 에러가 
+        - [my.cnf 변경으로 해결](http:s//gcjbro.blogspot.com/2016/11/mysql.html)
+            - http://egloos.zum.com/mcchae/v/11250100
+            
+- Handlebars
+    - 2중 반복문 , this 
+        - http://kwonnam.pe.kr/wiki/handlebars/handlebars_java
+        
+    - hbs 파일을 못읽을때
+        - handlebars-spring-boot-starter 덕분에 컨트롤러에서 문자열을 반환할때 앞의 path와 뒤의 파일 확장자는 자동으로 지정됩니다. 
+          (prefix: src/main/resources/templates, suffix: .hbs) 
+        - https://jojoldu.tistory.com/255
+        
+        
+- HandlerMethodArgumentResolver
+    - [개념](https://addio3305.tistory.com/75)
+    - WebMvcConfigurer를 구현한 config에서 bean으로 등록해야고, 추가해줘야함.
+    
+- Dispatcher servelet 공부
+    - https://mangkyu.tistory.com/13
+    - [기타 스프링의 구조에 대해서도 공부하기](https://elfinlas.github.io/2017/12/28/SpringBootInterceptor/)
+    
+- Interceptor
+    - [개념](https://www.journaldev.com/2676/spring-mvc-interceptor-example-handlerinterceptor-handlerinterceptoradapter)
+    
+- Spybean
+    - [개념](https://jojoldu.tistory.com/226)
+    
+- Column(unique = true)
+    - [database 생성시에만 유효](https://stackoverflow.com/questions/30460596/jpa-column-unique-true-what-is-really-point-of-having-unique-attribute)
+    - unique하지 않은 데이터가 입력될시 [MySQLIntegrityConstraintViolationException](https://www.baeldung.com/spring-dataIntegrityviolationexception)

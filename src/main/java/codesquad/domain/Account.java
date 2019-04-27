@@ -1,10 +1,14 @@
 package codesquad.domain;
 
-import codesquad.web.dto.AccountRegistration;
+import support.domain.AbstractEntity;
+import codesquad.validation.ValidationRegexpType;
+import codesquad.web.dto.AccountRegistrationDTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import support.domain.AbstractEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +21,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 public class Account extends AbstractEntity {
 
     @Size(min = 3, max = 20)
@@ -25,7 +30,7 @@ public class Account extends AbstractEntity {
     private String userId;
 
     @Column(nullable = false)
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()+=])(?=\\S+$).{8,}$")
+    @Pattern(regexp = ValidationRegexpType.PASSWORD)
     private String password;
 
     @Column(nullable = false)
@@ -37,22 +42,19 @@ public class Account extends AbstractEntity {
     private String email;
 
     @Column
-    @Pattern(regexp = "^$|^\\d{3}-\\d{3,4}-\\d{4}$")
+    @Pattern(regexp = ValidationRegexpType.PHONE_NUMBER)
     private String phoneNumber;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private MemberType type = MemberType.MEMBER;
-
-    public Account() {
-    }
+    private AccountType type = AccountType.MEMBER;
 
     public Account(String userId, String password, String name, String email) {
-        this(userId, password, name, email, MemberType.MEMBER);
+        this(userId, password, name, email, AccountType.MEMBER);
 
     }
 
-    public Account(String userId, String password, String name, String email, MemberType type) {
+    public Account(String userId, String password, String name, String email, AccountType type) {
         this.userId = userId;
         this.password = password;
         this.name = name;
@@ -60,7 +62,7 @@ public class Account extends AbstractEntity {
         this.type = type;
     }
 
-    public Account(Long id, String userId, String password, String name, String email, MemberType type) {
+    public Account(Long id, String userId, String password, String name, String email, AccountType type) {
         super(id);
         this.userId = userId;
         this.password = password;
@@ -69,13 +71,13 @@ public class Account extends AbstractEntity {
         this.type = type;
     }
 
-    public Account(AccountRegistration accountRegistration) {
-        this.userId = accountRegistration.getUserId();
-        this.password = accountRegistration.getPassword();
-        this.name = accountRegistration.getName();
-        this.email = accountRegistration.getEmail();
-        this.phoneNumber = accountRegistration.getPhoneNumber();
-        this.type = accountRegistration.getType();
+    public Account(AccountRegistrationDTO accountRegistrationDTO) {
+        this.userId = accountRegistrationDTO.getUserId();
+        this.password = accountRegistrationDTO.getPassword();
+        this.name = accountRegistrationDTO.getName();
+        this.email = accountRegistrationDTO.getEmail();
+        this.phoneNumber = accountRegistrationDTO.getPhoneNumber();
+        this.type = accountRegistrationDTO.getType();
     }
 
     public boolean matchPassword(String targetPassword) {
@@ -86,4 +88,5 @@ public class Account extends AbstractEntity {
         password = passwordEncoder.encode(password);
         return this;
     }
+
 }
