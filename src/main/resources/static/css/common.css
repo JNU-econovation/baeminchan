@@ -1,5 +1,5 @@
 /**
- * @project: baminchan-web
+ * @project: baminchan-codesquad.web
  * @build  : Tue Jun 19 2018 13:58:25 GMT+0900 (KST)
  * @release: 765de38 [Detached: 765de3872ac9b2af463572f5a94a26a45cff5177]
  */
@@ -818,7 +818,7 @@ ul.breadcrumb li:last-child a {
     height: 0;
     margin: -4px 0 0 0;
     padding: 9px 0 0 0;
-    background: url(https://cdn.bmf.kr/web/common/select_arrorw.png) left -9px no-repeat;
+    background: url("../img/select_arrow.png") left -9px no-repeat;
     text-indent: -9999em
 }
 
