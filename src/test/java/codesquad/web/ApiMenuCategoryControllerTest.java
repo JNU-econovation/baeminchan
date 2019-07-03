@@ -3,7 +3,7 @@ package codesquad.web;
 import codesquad.domain.Account;
 import codesquad.domain.AccountType;
 import codesquad.domain.MenuCategory;
-import codesquad.security.ManagerAccountHandlerMethodArgumentResolver;
+import codesquad.security.AdminAccountHandlerMethodArgumentResolver;
 import codesquad.service.MenuCategoryService;
 import codesquad.web.dto.MenuCategoryDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,7 +32,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.notNull;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
@@ -48,9 +47,9 @@ public class ApiMenuCategoryControllerTest {
     private MenuCategoryService menuCategoryService;
 
     @Mock
-    private ManagerAccountHandlerMethodArgumentResolver managerArgumentResolver;
+    private AdminAccountHandlerMethodArgumentResolver managerArgumentResolver;
 
-    private MockManagerArgumentResolver mockManagerArgumentResolver = new MockManagerArgumentResolver();
+    private MockAdminArgumentResolver mockManagerArgumentResolver = new MockAdminArgumentResolver();
 
     private JacksonTester<MenuCategoryDTO> jsonMenuCategoryDTO;
 
@@ -77,7 +76,7 @@ public class ApiMenuCategoryControllerTest {
         categories.add(fstCategory);
         categories.add(new MenuCategory(null, "카테고리2"));
 
-        manager = new Account("manager@gmail.com", "!Password1234", "manager", "manager@gmail.com", AccountType.MANAGER);
+        manager = new Account("manager@gmail.com", "!Password1234", "manager", "manager@gmail.com", AccountType.ADMIN);
     }
 
     @Test
@@ -120,14 +119,6 @@ public class ApiMenuCategoryControllerTest {
         //given
         when(menuCategoryService.deleteById(1l))
                 .thenReturn(new MenuCategory());
-        when(managerArgumentResolver.supportsParameter((MethodParameter) notNull()))
-                .thenReturn(true);
-        when(managerArgumentResolver.resolveArgument(
-                (MethodParameter) notNull()
-                , (ModelAndViewContainer) notNull()
-                , (NativeWebRequest) notNull()
-                , (WebDataBinderFactory) notNull()
-        )).thenReturn(manager);
 
         //when
         MockHttpServletResponse response = mockMvc.perform(
@@ -139,14 +130,14 @@ public class ApiMenuCategoryControllerTest {
         assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
     }
 
-    static class MockManagerArgumentResolver extends ManagerAccountHandlerMethodArgumentResolver {
+    static class MockAdminArgumentResolver extends AdminAccountHandlerMethodArgumentResolver {
 
         @Override
         public Object resolveArgument(MethodParameter methodParameter,
                                       ModelAndViewContainer modelAndViewContainer,
                                       NativeWebRequest nativeWebRequest,
                                       WebDataBinderFactory webDataBinderFactory) throws Exception {
-            return new Account("managerByMock@gmail.com", "!Password1234", "manager", "manager@gmail.com", AccountType.MANAGER);
+            return new Account("managerByMock@gmail.com", "!Password1234", "manager", "manager@gmail.com", AccountType.ADMIN);
         }
     }
 }
