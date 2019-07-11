@@ -1,9 +1,11 @@
 package codesquad.domain;
 
-import lombok.AllArgsConstructor;
+import codesquad.dto.SignUpDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -11,7 +13,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Component
+@Scope("prototype")
 public class Account {
     public static final int USER = 0;
     public static final int ADMIN = 1;
@@ -34,4 +37,20 @@ public class Account {
 
     @Column(nullable = false)
     private int AccountType;
+
+    public Account(String email, String password, String name, String phoneNumber) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.AccountType = USER;
+    }
+
+    public Account(SignUpDTO signUpDTO) {
+        this.email = signUpDTO.getEmail();
+        this.password = signUpDTO.getPassword();
+        this.name = signUpDTO.getName();
+        this.phoneNumber = signUpDTO.getPhoneNumber();
+        this.AccountType = USER;
+    }
 }
