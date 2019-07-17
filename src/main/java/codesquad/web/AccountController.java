@@ -10,4 +10,9 @@ public class AccountController {
     public String joinForm() {
         return "/join";
     }
+
+    @GetMapping("/login")
+    public String loginForm() {
+        return "/login";
+    }
 }

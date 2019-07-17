@@ -25,24 +25,24 @@ public class Account {
 
     @NotBlank
     @Email
-    @Column(nullable = false)
+    @Column(nullable = false, name = "email")
     private String email;
 
     @NotBlank
     @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$")
-    @Column(nullable = false)
+    @Column(nullable = false, name = "password")
     private String password;
 
     @Size(min = 2, max = 15)
-    @Column(nullable = false)
+    @Column(nullable = false, name = "name")
     private String name;
 
     @NotBlank
     @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$")
-    @Column(nullable = false)
+    @Column(nullable = false, name = "phone_number")
     private String phoneNumber;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "account_type")
     private int AccountType;
 
     public Account(String email, String password, String name, String phoneNumber) {
@@ -59,5 +59,9 @@ public class Account {
         this.name = signUpDTO.getName();
         this.phoneNumber = signUpDTO.getPhoneNumber();
         this.AccountType = USER;
+    }
+
+    public boolean matchPassword(String password) {
+        return this.password.equals(password);
     }
 }

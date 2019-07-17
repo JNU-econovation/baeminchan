@@ -2,9 +2,14 @@ package codesquad.service;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
+import codesquad.exception.NotFoundException;
+import codesquad.exception.UnAuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpSession;
 
 @Service
 public class AccountService {
@@ -21,6 +26,16 @@ public class AccountService {
     }
 
     public Account findByEmail(String email) {
-        return accountRepository.findByEmail(email).orElseThrow(RuntimeException::new);
+        return accountRepository.findByEmail(email).orElseThrow(NotFoundException::new);
+    }
+
+    public Account login(HttpSession session, LoginDTO loginDTO) {
+        Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundException::new);
+
+        if (!account.matchPassword(loginDTO.getPassword())) {
+            throw new UnAuthenticationException();
+        }
+
+        return account;
     }
 }
