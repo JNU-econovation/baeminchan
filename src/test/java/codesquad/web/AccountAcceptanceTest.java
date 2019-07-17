@@ -35,37 +35,4 @@ public class AccountAcceptanceTest extends AcceptanceTest {
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
     }
-
-    @Test
-    public void createInvalidEmail() {
-        String email = "bellroute@";
-
-        SignUpDTO signUpDTO = new SignUpDTO(email, "1234abcd", "1234abcd", "010-0000-0000", "bell");
-
-        ResponseEntity<String> response = template().postForEntity("/join/sign-up", signUpDTO, String.class);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-        assertThat(accountRepository.findByEmail(email).isPresent()).isFalse();
-    }
-
-    @Test
-    public void createInvalidPassword() {
-        String email = "bellroute@gmail.com";
-
-        SignUpDTO signUpDTO = new SignUpDTO(email, "1234abcd", "abcd1234", "010-0000-0000", "bell");
-
-        ResponseEntity<String> response = template().postForEntity("/join/sign-up", signUpDTO, String.class);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-        assertThat(accountRepository.findByEmail(email).isPresent()).isFalse();
-    }
-
-    @Test
-    public void createBlankData() {
-        String email = "bellroute@gmail.com";
-
-        SignUpDTO signUpDTO = new SignUpDTO(email, "1234abcd", "1234abcd", "010-0000-0000", "");
-
-        ResponseEntity<String> response = template().postForEntity("/join/sign-up", signUpDTO, String.class);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-        assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
-    }
 }

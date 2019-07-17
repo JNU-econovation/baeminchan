@@ -4,17 +4,17 @@ import codesquad.dto.SignUpDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Component
-@Scope("prototype")
 public class Account {
     public static final int USER = 0;
     public static final int ADMIN = 1;
@@ -23,15 +23,22 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotBlank
+    @Email
     @Column(nullable = false)
     private String email;
 
+    @NotBlank
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$")
     @Column(nullable = false)
     private String password;
 
+    @Size(min = 2, max = 15)
     @Column(nullable = false)
     private String name;
 
+    @NotBlank
+    @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$")
     @Column(nullable = false)
     private String phoneNumber;
 
