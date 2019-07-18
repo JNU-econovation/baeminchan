@@ -4,8 +4,10 @@ import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
-import codesquad.exception.NotFoundException;
+import codesquad.exception.DuplicatedAccountException;
+import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
+import codesquad.exception.UnMatchedCheckingPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -28,7 +30,11 @@ public class AccountService {
     public Account create(SignUpDTO signUpDTO) {
 
         if (!signUpDTO.isCheckingPassWordMatch()) {
-            throw new RuntimeException();
+            throw new UnMatchedCheckingPasswordException();
+        }
+
+        if (accountRepository.findByEmail(signUpDTO.getEmail()).isPresent()) {
+            throw new DuplicatedAccountException();
         }
 
         signUpDTO.encodePassword(passwordEncoder.encode(signUpDTO.getPassword()));
@@ -38,11 +44,11 @@ public class AccountService {
     }
 
     public Account findByEmail(String email) {
-        return accountRepository.findByEmail(email).orElseThrow(NotFoundException::new);
+        return accountRepository.findByEmail(email).orElseThrow(NotFoundAccountException::new);
     }
 
     public ResponseEntity<Account> login(HttpSession session, LoginDTO loginDTO) {
-        Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundException::new);
+        Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundAccountException::new);
 
         if (!passwordEncoder.matches(loginDTO.getPassword(), account.getPassword())) {
             throw new UnAuthenticationException();

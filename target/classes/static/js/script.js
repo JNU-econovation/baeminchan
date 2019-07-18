@@ -38,6 +38,7 @@ function signUp() {
         if(status >= 400) {
             console.log('error 가 발생했네요 ', result.error);
             console.log(result);
+            alert(result);
         }else{
             redirectLoginForm(result);
         }
@@ -81,6 +82,7 @@ function checkLoginForm() {
         if(status >= 400) {
             console.log('error 가 발생했네요 ', result.error);
             console.log(result);
+            alert(result.message);
         }else{
             redirectMain(result);
         }

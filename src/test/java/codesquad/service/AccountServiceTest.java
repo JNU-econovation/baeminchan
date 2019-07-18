@@ -4,7 +4,7 @@ import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
-import codesquad.exception.NotFoundException;
+import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -74,12 +74,12 @@ public class AccountServiceTest {
         Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
-        when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(NotFoundException::new).getPassword())).thenReturn(true);
+        when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(NotFoundAccountException::new).getPassword())).thenReturn(true);
 
         assertThat(accountService.login(session, new LoginDTO(EMAIL, PASSWORD))).isEqualTo(account);
     }
 
-    @Test(expected = NotFoundException.class)
+    @Test(expected = NotFoundAccountException.class)
     public void login_wrong_email() {
         Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();

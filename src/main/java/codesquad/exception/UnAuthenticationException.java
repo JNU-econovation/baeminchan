@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class UnAuthenticationException extends RuntimeException {
 
     public UnAuthenticationException() {
-        super();
+        super("비밀번호가 올바르지 않습니다.");
     }
 
     public UnAuthenticationException(String message) {
