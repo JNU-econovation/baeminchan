@@ -74,7 +74,7 @@ public class AccountServiceTest {
         Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
-        when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(RuntimeException::new).getPassword())).thenReturn(true);
+        when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(NotFoundException::new).getPassword())).thenReturn(true);
 
         assertThat(accountService.login(session, new LoginDTO(EMAIL, PASSWORD))).isEqualTo(account);
     }

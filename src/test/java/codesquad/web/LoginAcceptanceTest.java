@@ -3,6 +3,7 @@ package codesquad.web;
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
+import codesquad.exception.NotFoundException;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,7 @@ public class LoginAcceptanceTest extends AcceptanceTest {
         String email = "bellroute@gmail.com";
         String password = "abcd1234";
 
-        Account account = accountRepository.findByEmail(email).orElseThrow(RuntimeException::new);
+        Account account = accountRepository.findByEmail(email).orElseThrow(NotFoundException::new);
         account.setPassword(passwordEncoder.encode(password));
         accountRepository.save(account);
 
@@ -40,7 +41,7 @@ public class LoginAcceptanceTest extends AcceptanceTest {
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
         assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
-        assertThat(accountRepository.findByEmail(email).orElseThrow(RuntimeException::new).matchPassword(password));
+        assertThat(accountRepository.findByEmail(email).orElseThrow(NotFoundException::new).matchPassword(password));
         assertThat(response.getHeaders().getLocation().getPath()).startsWith("/");
     }
 
