@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -26,7 +27,7 @@ public class ApiAccountController {
     private AccountService accountService;
 
     @PostMapping("/member/sign-up")
-    public ResponseEntity<Void> createAccount(@RequestBody SignUpDTO signUpDTO) {
+    public ResponseEntity createAccount(@Valid @RequestBody SignUpDTO signUpDTO) {
         log.debug("request log: {}", signUpDTO);
 
         accountService.create(signUpDTO);
@@ -34,7 +35,7 @@ public class ApiAccountController {
         HttpHeaders headers = new HttpHeaders();
         headers.setLocation(URI.create("/login"));
         headers.setContentType(MediaType.APPLICATION_JSON);
-        return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+        return new ResponseEntity(headers, HttpStatus.CREATED);
     }
 
     @PostMapping("/member/login")

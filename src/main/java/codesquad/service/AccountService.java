@@ -32,8 +32,9 @@ public class AccountService {
         }
 
         signUpDTO.encodePassword(passwordEncoder.encode(signUpDTO.getPassword()));
+        Account account = new Account(signUpDTO);
 
-        return accountRepository.save(new Account(signUpDTO));
+        return accountRepository.save(account);
     }
 
     public Account findByEmail(String email) {
