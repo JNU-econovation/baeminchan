@@ -49,10 +49,10 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_password_isEmpty() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "", "password12", "010-0000-0000", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
+        Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(2);
 
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
+        for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
         }
     }
@@ -60,10 +60,10 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_password_isWrong() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password", "password", "010-0000-0000", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
+        Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(1);
 
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
+        for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
         }
     }

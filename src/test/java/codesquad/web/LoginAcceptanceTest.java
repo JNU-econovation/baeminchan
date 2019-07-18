@@ -1,5 +1,6 @@
 package codesquad.web;
 
+import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import support.test.AcceptanceTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,12 +21,21 @@ public class LoginAcceptanceTest extends AcceptanceTest {
     @Autowired
     private AccountRepository accountRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Test
     public void login() {
         String email = "bellroute@gmail.com";
         String password = "abcd1234";
 
+        Account account = accountRepository.findByEmail(email).orElseThrow(RuntimeException::new);
+        account.setPassword(passwordEncoder.encode(password));
+        accountRepository.save(account);
+
         LoginDTO request = new LoginDTO(email, password);
+
+
         ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);

@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b47b525-1bac-4e3d-b67d-5c41228a7220" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_1_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_1_0_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/baeminchan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/baeminchan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/codesquad/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codesquad/domain/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/codesquad/dto/SignUpDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codesquad/dto/SignUpDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/codesquad/service/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codesquad/service/AccountServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/codesquad/domain/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/codesquad/domain/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/codesquad/dto/SignUpDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/codesquad/dto/SignUpDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/codesquad/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/codesquad/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/codesquad/config/PasswordEncoderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/codesquad/config/PasswordEncoderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/codesquad/service/AccountServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/codesquad/service/AccountServiceTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,28 +31,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/BaeminchanApplication.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="435">
+              <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
+        <entry file="file://$PROJECT_DIR$/src/test/java/support/test/AcceptanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="285">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#795#796#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +73,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+            <state relative-caret-position="273">
+              <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/AccountAcceptanceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="360">
+              <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,10 +119,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/service/AccountServiceTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state relative-caret-position="622">
+              <caret line="42" column="82" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,55 +131,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/dto/SignUpDTO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="115" selection-start-column="115" selection-end-column="115" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/domain/Account.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/web/AccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
-                <element signature="e#323#324#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/web/ApiAccountController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1185">
+              <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -191,31 +181,31 @@
         <option value="$PROJECT_DIR$/src/test/java/codesquad/service/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/domain/AccountRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/join.html" />
-        <option value="$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/web/AccountController.java" />
         <option value="$PROJECT_DIR$/src/test/java/codesquad/web/AccountAcceptanceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/support/test/AcceptanceTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/web/ApiAccountController.java" />
         <option value="$PROJECT_DIR$/src/test/java/support/HtmlFormDataBuilder.java" />
-        <option value="$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/exception/ControllerAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/exception/NotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/exception/UnAuthroizedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/exception/UnAuthenticationException.java" />
         <option value="$PROJECT_DIR$/src/test/java/codesquad/domain/AccountTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/service/PasswordEncoding.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/security/PasswordEncoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/security/PasswordEncoding.java" />
-        <option value="$PROJECT_DIR$/src/main/java/codesquad/config/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/domain/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/dto/SignUpDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/codesquad/dto/LoginDTO.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/codesquad/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java" />
         <option value="$PROJECT_DIR$/src/test/java/codesquad/service/AccountServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java" />
       </list>
     </option>
   </component>
@@ -458,15 +448,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="baeminchan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="baeminchan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -480,7 +461,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563429814675" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563432417801" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/codesquad" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -516,23 +497,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccountServiceTest">
-    <configuration name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="baeminchan" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="codesquad.security.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="codesquad.service" />
-      <option name="MAIN_CLASS_NAME" value="codesquad.service.AccountServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountServiceTest.createAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccountServiceTest.login">
+    <configuration name="AccountServiceTest.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="baeminchan" />
       <extension name="coverage">
         <pattern>
@@ -542,13 +508,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="codesquad.service" />
       <option name="MAIN_CLASS_NAME" value="codesquad.service.AccountServiceTest" />
-      <option name="METHOD_NAME" value="createAccount" />
+      <option name="METHOD_NAME" value="login" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.passwordMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountServiceTest.login_wrong_password" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="baeminchan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codesquad.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codesquad.service" />
+      <option name="MAIN_CLASS_NAME" value="codesquad.service.AccountServiceTest" />
+      <option name="METHOD_NAME" value="login_wrong_password" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountValidationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="baeminchan" />
       <extension name="coverage">
         <pattern>
@@ -557,39 +539,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="codesquad.domain" />
-      <option name="MAIN_CLASS_NAME" value="codesquad.domain.AccountTest" />
-      <option name="METHOD_NAME" value="passwordMatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PasswordEncoderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="baeminchan" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="codesquad.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="codesquad.config" />
-      <option name="MAIN_CLASS_NAME" value="codesquad.config.PasswordEncoderTest" />
+      <option name="MAIN_CLASS_NAME" value="codesquad.domain.AccountValidationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordEncoderTest.match" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginAcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="baeminchan" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="codesquad.config.*" />
+          <option name="PATTERN" value="codesquad.web.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="codesquad.config" />
-      <option name="MAIN_CLASS_NAME" value="codesquad.config.PasswordEncoderTest" />
-      <option name="METHOD_NAME" value="match" />
+      <option name="PACKAGE_NAME" value="codesquad.web" />
+      <option name="MAIN_CLASS_NAME" value="codesquad.web.LoginAcceptanceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginAcceptanceTest.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="baeminchan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codesquad.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codesquad.web" />
+      <option name="MAIN_CLASS_NAME" value="codesquad.web.LoginAcceptanceTest" />
+      <option name="METHOD_NAME" value="login" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -604,11 +585,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountServiceTest" />
-        <item itemvalue="JUnit.PasswordEncoderTest" />
-        <item itemvalue="JUnit.AccountServiceTest.createAccount" />
-        <item itemvalue="JUnit.PasswordEncoderTest.match" />
-        <item itemvalue="JUnit.AccountTest.passwordMatch" />
+        <item itemvalue="JUnit.AccountServiceTest.login" />
+        <item itemvalue="JUnit.LoginAcceptanceTest.login" />
+        <item itemvalue="JUnit.AccountServiceTest.login_wrong_password" />
+        <item itemvalue="JUnit.LoginAcceptanceTest" />
+        <item itemvalue="JUnit.AccountValidationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -628,50 +609,50 @@
       <workItem from="1562570766336" duration="3191000" />
       <workItem from="1562585674140" duration="2063000" />
       <workItem from="1562650886151" duration="4237000" />
-      <workItem from="1562741128679" duration="45290000" />
+      <workItem from="1562741128679" duration="47465000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountServiceTest - 2019.07.18 at 14h 46m 03s.xml">
+    <history-entry file="AccountServiceTest - 2019.07.18 at 15h 32m 18s.xml">
       <configuration name="AccountServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 46m 55s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 47m 15s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 49m 51s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 50m 09s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 50m 41s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 51m 08s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PasswordEncoderTest - 2019.07.18 at 14h 58m 32s.xml">
-      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AccountServiceTest - 2019.07.18 at 14h 58m 38s.xml">
+    <history-entry file="AccountServiceTest - 2019.07.18 at 15h 32m 55s.xml">
       <configuration name="AccountServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountServiceTest - 2019.07.18 at 15h 03m 41s.xml">
+    <history-entry file="PasswordEncoderTest - 2019.07.18 at 15h 33m 31s.xml">
+      <configuration name="PasswordEncoderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest - 2019.07.18 at 15h 33m 49s.xml">
       <configuration name="AccountServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginAcceptanceTest - 2019.07.18 at 15h 36m 13s.xml">
+      <configuration name="LoginAcceptanceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountValidationTest - 2019.07.18 at 15h 36m 36s.xml">
+      <configuration name="AccountValidationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountValidationTest - 2019.07.18 at 15h 38m 04s.xml">
+      <configuration name="AccountValidationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LoginAcceptanceTest - 2019.07.18 at 15h 41m 01s.xml">
+      <configuration name="LoginAcceptanceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_login_wrong_password - 2019.07.18 at 15h 41m 52s.xml">
+      <configuration name="AccountServiceTest.login_wrong_password" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountServiceTest_login - 2019.07.18 at 15h 41m 59s.xml">
+      <configuration name="AccountServiceTest.login" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54781000" />
+    <option name="totallyTimeSpent" value="56956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -681,12 +662,12 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29897958" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29897958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32959184" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32857144" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -749,16 +730,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/Entity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.2.Final/hibernate-jpa-2.1-api-1.0.2.Final.jar!/javax/persistence/GenerationType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -897,13 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="115" selection-start-column="115" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -939,34 +903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/exception/NotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/support/HtmlFormDataBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -978,13 +918,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1012,38 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/AccountAcceptanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/support/test/AcceptanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/domain/AccountTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1058,13 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="975" column="19" selection-start-line="975" selection-start-column="19" selection-end-line="975" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1130,40 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/dto/LoginDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/dto/SignUpDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1186,20 +1046,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/exception/NotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/dto/LoginDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/support/test/AcceptanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#795#796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar!/org/springframework/beans/factory/annotation/Autowired.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/config/PasswordEncoderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/AccountAcceptanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.1.0.RELEASE/spring-security-core-4.1.0.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/codesquad/service/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="40" column="68" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+        <state relative-caret-position="273">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1208,8 +1156,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/service/AccountServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="265">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="115" selection-start-column="115" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/domain/AccountValidationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/codesquad/web/LoginAcceptanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="42" column="82" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

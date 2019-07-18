@@ -38,7 +38,7 @@ public class AccountService {
     public Account login(HttpSession session, LoginDTO loginDTO) {
         Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundException::new);
 
-        if (!passwordEncoder.matches(account.getPassword(), loginDTO.getPassword())) {
+        if (!passwordEncoder.matches(loginDTO.getPassword(), account.getPassword())) {
             throw new UnAuthenticationException();
         }
 

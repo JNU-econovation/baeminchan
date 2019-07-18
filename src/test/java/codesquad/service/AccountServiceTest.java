@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.servlet.http.HttpSession;
 import java.util.Optional;
@@ -36,6 +37,10 @@ public class AccountServiceTest {
 
     @InjectMocks
     private AccountService accountService;
+
+    @Mock
+    private PasswordEncoder passwordEncoder;
+
 
     @Test
     public void createAccount() {
@@ -69,6 +74,7 @@ public class AccountServiceTest {
         Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
+        when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(RuntimeException::new).getPassword())).thenReturn(true);
 
         assertThat(accountService.login(session, new LoginDTO(EMAIL, PASSWORD))).isEqualTo(account);
     }
