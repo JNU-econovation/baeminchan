@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpSession;
 
 import javax.servlet.http.HttpSession;
@@ -21,6 +22,7 @@ import static org.mockito.Mockito.when;
 
 
 @RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
 public class AccountServiceTest {
     private static final String EMAIL = "test@gmail.com";
     private static final String WRONG_EMAIL = "wrong@gmail.com";

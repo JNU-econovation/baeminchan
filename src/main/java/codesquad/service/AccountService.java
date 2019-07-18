@@ -7,6 +7,7 @@ import codesquad.dto.SignUpDTO;
 import codesquad.exception.NotFoundException;
 import codesquad.exception.UnAuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
@@ -17,10 +18,15 @@ public class AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     public Account create(SignUpDTO signUpDTO) {
         if (!signUpDTO.isCheckingPassWordMatch()) {
             throw new RuntimeException();
         }
+
+        signUpDTO.encodePassword(passwordEncoder.encode(signUpDTO.getPassword()));
 
         return accountRepository.save(new Account(signUpDTO));
     }
@@ -32,7 +38,7 @@ public class AccountService {
     public Account login(HttpSession session, LoginDTO loginDTO) {
         Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundException::new);
 
-        if (!account.matchPassword(loginDTO.getPassword())) {
+        if (!passwordEncoder.matches(account.getPassword(), loginDTO.getPassword())) {
             throw new UnAuthenticationException();
         }
 

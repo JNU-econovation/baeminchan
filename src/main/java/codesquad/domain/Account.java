@@ -28,8 +28,6 @@ public class Account {
     @Column(nullable = false, name = "email")
     private String email;
 
-    @NotBlank
-    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$")
     @Column(nullable = false, name = "password")
     private String password;
 
