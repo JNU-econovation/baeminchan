@@ -11,6 +11,11 @@ public class AccountController {
         return "/join";
     }
 
+    @GetMapping("/member/join")
+    public String joinForm_another() {
+        return "redirect:/join";
+    }
+
     @GetMapping("/login")
     public String loginForm() {
         return "/login";

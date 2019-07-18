@@ -24,19 +24,19 @@ public class Account {
     private Long id;
 
     @NotBlank
-    @Email
+    @Email(message = "이메일 형식이 올바르지 않습니다.")
     @Column(nullable = false, name = "email")
     private String email;
 
     @Column(nullable = false, name = "password")
     private String password;
 
-    @Size(min = 2, max = 15)
+    @Size(min = 2, max = 15, message = "이름은 2~15자 이내로 작성해 주세요.")
     @Column(nullable = false, name = "name")
     private String name;
 
     @NotBlank
-    @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$")
+    @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$", message = "비밀번호 형식이 올바르지 않습니다.")
     @Column(nullable = false, name = "phone_number")
     private String phoneNumber;
 
