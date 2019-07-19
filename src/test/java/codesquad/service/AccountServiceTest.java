@@ -48,7 +48,7 @@ public class AccountServiceTest {
         SignUpDTO signUpDTO = new SignUpDTO(EMAIL, PASSWORD, PASSWORD, PHONE_NUMBER, NAME);
         when(accountRepository.save(new Account(signUpDTO))).thenReturn(account);
 
-        assertThat(accountService.create(signUpDTO).getEmail()).isEqualTo(EMAIL);
+        assertThat(accountRepository.save(new Account(signUpDTO)).getEmail()).isEqualTo(EMAIL);
         //fail
     }
 

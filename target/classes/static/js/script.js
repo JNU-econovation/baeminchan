@@ -14,7 +14,7 @@ function signUp() {
         'Content-Type': 'application/json;charset=UTF-8'
     });
 
-    fetch('/member/sign-up',{
+    fetch('/member/sign-up', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
@@ -28,18 +28,31 @@ function signUp() {
         const data = response.text();
         console.log(data);
 
-        return data.then(result =>  {
+        return data.then(result => {
             return {
-                'result' : result,
-                'status' : response.status
+                'result': result,
+                'status': response.status
             }
         })
-    }).then( ({result, status}) => {
-        if(status >= 400) {
+    }).then(({result, status}) => {
+        if (status >= 400) {
+            result = JSON.parse(result);
             console.log('error 가 발생했네요 ', result.error);
             console.log(result);
-            alert(result);
-        }else{
+
+            if (result.errors != null) {
+                let log = "";
+
+                for (let i = 0; i < result.errors.length; i++) {
+                    log += result.errors[i].defaultMessage + "\n";
+                }
+
+                alert(log);
+            } else {
+                alert(result.message);
+            }
+
+        } else {
             redirectLoginForm(result);
         }
     }).catch(err => {
@@ -61,7 +74,7 @@ function checkLoginForm() {
         'Content-Type': 'application/json;charset=UTF-8'
     });
 
-    fetch('/member/login',{
+    fetch('/member/login', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
@@ -72,18 +85,30 @@ function checkLoginForm() {
         const data = response.json();
         console.log(data);
 
-        return data.then(result =>  {
+        return data.then(result => {
             return {
-                'result' : result,
-                'status' : response.status
+                'result': result,
+                'status': response.status
             }
         })
-    }).then( ({result, status}) => {
-        if(status >= 400) {
+    }).then(({result, status}) => {
+        if (status >= 400) {
             console.log('error 가 발생했네요 ', result.error);
             console.log(result);
-            alert(result.message);
-        }else{
+
+            if (result.errors != null) {
+                let log = "";
+
+                for (let i = 0; i < result.errors.length; i++) {
+                    log += result.errors[i].defaultMessage + "\n";
+                }
+
+                alert(log);
+            } else {
+                alert(result.message);
+            }
+
+        } else {
             redirectMain(result);
         }
     }).catch(err => {

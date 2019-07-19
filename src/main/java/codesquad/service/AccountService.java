@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 
 @Service
 public class AccountService {
+    private static final String SESSIONED_USER = "sessionedUser";
 
     @Autowired
     private AccountRepository accountRepository;
@@ -27,7 +28,7 @@ public class AccountService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public Account create(SignUpDTO signUpDTO) {
+    public ResponseEntity<Void> create(SignUpDTO signUpDTO) {
 
         if (!signUpDTO.isCheckingPassWordMatch()) {
             throw new UnMatchedCheckingPasswordException();
@@ -40,7 +41,11 @@ public class AccountService {
         signUpDTO.encodePassword(passwordEncoder.encode(signUpDTO.getPassword()));
         Account account = new Account(signUpDTO);
 
-        return accountRepository.save(account);
+        accountRepository.save(account);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
     public Account findByEmail(String email) {
@@ -53,6 +58,8 @@ public class AccountService {
         if (!passwordEncoder.matches(loginDTO.getPassword(), account.getPassword())) {
             throw new UnAuthenticationException();
         }
+
+        session.setAttribute(SESSIONED_USER, account);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
