@@ -27,30 +27,8 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_email_isEmpty() {
         SignUpDTO signUpDTO = new SignUpDTO("", "password12", "password12", "010-0000-0000", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
-        assertThat(constraintViolations.size()).isEqualTo(1);
-
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
-            log.debug("violation error message : {}", constraintViolation.getMessage());
-        }
-    }
-
-    @Test
-    public void signUp_when_email_isWrong() {
-        SignUpDTO signUpDTO = new SignUpDTO("bell@", "password12", "password12", "010-0000-0000", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
-        assertThat(constraintViolations.size()).isEqualTo(1);
-
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
-            log.debug("violation error message : {}", constraintViolation.getMessage());
-        }
-    }
-
-    @Test
-    public void signUp_when_password_isEmpty() {
-        SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "", "password12", "010-0000-0000", "name");
         Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
-        assertThat(constraintViolations.size()).isEqualTo(2);
+        assertThat(constraintViolations.size()).isEqualTo(1);
 
         for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
@@ -58,8 +36,8 @@ public class AccountValidationTest {
     }
 
     @Test
-    public void signUp_when_password_isWrong() {
-        SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password", "password", "010-0000-0000", "name");
+    public void signUp_when_email_isWrong() {
+        SignUpDTO signUpDTO = new SignUpDTO("bell@", "password12", "password12", "010-0000-0000", "name");
         Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(1);
 
@@ -72,10 +50,10 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_name_isEmpty() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password12", "password12", "010-0000-0000", "");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
+        Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(1);
 
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
+        for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
         }
     }
@@ -83,10 +61,10 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_phoneNumber_isEmpty() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password12", "password12", "", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
+        Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(2);
 
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
+        for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
         }
     }
@@ -94,10 +72,10 @@ public class AccountValidationTest {
     @Test
     public void signUp_when_phoneNumber_isWrong() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password12", "password12", "010-00-000", "name");
-        Set<ConstraintViolation<Account>> constraintViolations = validator.validate(new Account(signUpDTO));
+        Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
         assertThat(constraintViolations.size()).isEqualTo(1);
 
-        for (ConstraintViolation<Account> constraintViolation : constraintViolations) {
+        for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());
         }
     }

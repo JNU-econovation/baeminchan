@@ -1,10 +1,11 @@
 package codesquad.dto;
 
+import codesquad.utils.ExceptionMessages;
+import codesquad.utils.RegexUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -15,22 +16,20 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 public class SignUpDTO {
 
-    @NotBlank(message = "이메일을 입력해 주세요.")
-    @Email(message = "이메일 형식이 올바르지 않습니다.")
+    @NotBlank(message = ExceptionMessages.NO_EMAIL)
+    @Email(message = ExceptionMessages.INVALID_EMAIL)
     private String email;
 
-    @NotBlank(message = "비밀번호를 입력해 주세요.")
-    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,16}$", message = "비밀번호 형식이 올바르지 않습니다.")
+    @Pattern(regexp = RegexUtil.REGEX_PASSWORD, message = ExceptionMessages.INVALID_PASSWORD)
     private String password;
 
     private String passwordForCheck;
 
-    @NotBlank(message = "전화번호를 입력해 주세요.")
-    @Pattern(regexp = "^\\d{3}-\\d{3,4}-\\d{4}$", message = "전화번호 형식이 올바르지 않습니다.")
+    @NotBlank(message = ExceptionMessages.NO_PHONE_NUMBER)
+    @Pattern(regexp = RegexUtil.REGEX_PHONE_NUMBER, message = ExceptionMessages.INVALID_PHONE_NUMBER)
     private String phoneNumber;
 
-    @Size(min = 2, max = 15, message = "이름은 2~15자 이내로 작성해 주세요.")
-    @Column(nullable = false, name = "name")
+    @Size(min = 2, max = 15, message = ExceptionMessages.INVALID_NAME)
     private String name;
 
     public boolean isCheckingPassWordMatch() {

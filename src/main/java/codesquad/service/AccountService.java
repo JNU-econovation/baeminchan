@@ -8,11 +8,9 @@ import codesquad.exception.DuplicatedAccountException;
 import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
 import codesquad.exception.UnMatchedCheckingPasswordException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import codesquad.utils.SessionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -20,15 +18,16 @@ import javax.servlet.http.HttpSession;
 
 @Service
 public class AccountService {
-    private static final String SESSIONED_USER = "sessionedUser";
+    private static final Logger log = LoggerFactory.getLogger(AccountService.class);
+    private final AccountRepository accountRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private AccountRepository accountRepository;
+    public AccountService(AccountRepository accountRepository, PasswordEncoder passwordEncoder) {
+        this.accountRepository = accountRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    public ResponseEntity<Void> create(SignUpDTO signUpDTO) {
+    public Account create(SignUpDTO signUpDTO) {
 
         if (!signUpDTO.isCheckingPassWordMatch()) {
             throw new UnMatchedCheckingPasswordException();
@@ -39,30 +38,26 @@ public class AccountService {
         }
 
         signUpDTO.encodePassword(passwordEncoder.encode(signUpDTO.getPassword()));
-        Account account = new Account(signUpDTO);
 
-        accountRepository.save(account);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return new ResponseEntity<>(headers, HttpStatus.CREATED);
+        return accountRepository.save(new Account(signUpDTO));
     }
 
     public Account findByEmail(String email) {
         return accountRepository.findByEmail(email).orElseThrow(NotFoundAccountException::new);
     }
 
-    public ResponseEntity<Account> login(HttpSession session, LoginDTO loginDTO) {
-        Account account = accountRepository.findByEmail(loginDTO.getEmail()).orElseThrow(NotFoundAccountException::new);
+    public Account login(HttpSession session, LoginDTO loginDTO) {
+        Account account = findByEmail(loginDTO.getEmail());
 
-        if (!passwordEncoder.matches(loginDTO.getPassword(), account.getPassword())) {
+        matchPassword(loginDTO.getPassword(), account.getPassword());
+        session.setAttribute(SessionUtil.SESSIONED_USER, account);
+
+        return account;
+    }
+
+    private void matchPassword(String requestPassword, String actualPassword) {
+        if (!passwordEncoder.matches(requestPassword, actualPassword)) {
             throw new UnAuthenticationException();
         }
-
-        session.setAttribute(SESSIONED_USER, account);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        return new ResponseEntity<>(account, headers, HttpStatus.FOUND);
     }
 }

@@ -20,4 +20,9 @@ public class AccountController {
     public String loginForm() {
         return "/login";
     }
+
+    @GetMapping("/")
+    public String main() {
+        return "/index";
+    }
 }

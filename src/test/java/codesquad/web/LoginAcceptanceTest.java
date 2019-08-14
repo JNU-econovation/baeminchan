@@ -30,7 +30,7 @@ public class LoginAcceptanceTest extends AcceptanceTest {
         String email = "bellroute@gmail.com";
         String password = "abcd1234";
 
-        Account account = accountRepository.findByEmail(email).orElseThrow(NotFoundAccountException::new);
+        Account account = defaultUser();
         account.setPassword(passwordEncoder.encode(password));
         accountRepository.save(account);
 

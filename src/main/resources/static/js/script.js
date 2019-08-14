@@ -37,14 +37,14 @@ function signUp() {
     }).then(({result, status}) => {
         if (status >= 400) {
             result = JSON.parse(result);
-            console.log('error 가 발생했네요 ', result.error);
+            console.log('error 가 발생했네요 ', result.status);
             console.log(result);
 
             if (result.errors != null) {
                 let log = "";
 
                 for (let i = 0; i < result.errors.length; i++) {
-                    log += result.errors[i].defaultMessage + "\n";
+                    log += result.errors[i] + "\n";
                 }
 
                 alert(log);
@@ -53,16 +53,11 @@ function signUp() {
             }
 
         } else {
-            redirectLoginForm(result);
+            redirectPage("/login");
         }
     }).catch(err => {
         console.log("oops..", err)
     })
-}
-
-function redirectLoginForm(data) {
-    console.log(data);
-    window.location = 'http://localhost:8080/login';
 }
 
 function checkLoginForm() {
@@ -82,10 +77,12 @@ function checkLoginForm() {
             'password': password,
         })
     }).then((response) => {
-        const data = response.json();
+        const data = response.text();
         console.log(data);
 
         return data.then(result => {
+            console.log(result);
+
             return {
                 'result': result,
                 'status': response.status
@@ -93,14 +90,15 @@ function checkLoginForm() {
         })
     }).then(({result, status}) => {
         if (status >= 400) {
-            console.log('error 가 발생했네요 ', result.error);
+            result = JSON.parse(result);
+            console.log('error 가 발생했네요 ', result);
             console.log(result);
 
             if (result.errors != null) {
                 let log = "";
 
                 for (let i = 0; i < result.errors.length; i++) {
-                    log += result.errors[i].defaultMessage + "\n";
+                    log += result.errors[i] + "\n";
                 }
 
                 alert(log);
@@ -109,14 +107,14 @@ function checkLoginForm() {
             }
 
         } else {
-            redirectMain(result);
+            redirectPage("/");
         }
     }).catch(err => {
         console.log("oops..", err)
     })
 }
 
-function redirectMain(data) {
-    console.log(data);
-    window.location = 'http://localhost:8080';
+function redirectPage(path) {
+    console.log("redirect to " + path);
+    location.pathname = path;
 }

@@ -8,6 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class AcceptanceTest {
@@ -16,7 +18,7 @@ public abstract class AcceptanceTest {
     @Autowired
     private TestRestTemplate template;
 
-    @Autowired
+    @Resource
     private AccountRepository accountRepository;
 
     public TestRestTemplate template() {
@@ -32,7 +34,20 @@ public abstract class AcceptanceTest {
     }
 
     protected Account defaultUser() {
+        createDefaultUser();
+
         return findByEmailId(DEFAULT_LOGIN_USER);
+    }
+
+    private void createDefaultUser() {
+        Account account = new Account()
+                .setEmail(DEFAULT_LOGIN_USER)
+                .setName("bell")
+                .setPassword("aaaa1111")
+                .setPhoneNumber("010-0000-0000")
+                .build();
+
+        accountRepository.save(account);
     }
 
     protected Account findByEmailId(String accountId) {

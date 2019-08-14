@@ -1,13 +1,11 @@
 package codesquad.exception;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import codesquad.utils.ExceptionMessages;
 
-@ResponseStatus(value = HttpStatus.BAD_REQUEST)
 public class DuplicatedAccountException extends RuntimeException {
 
     public DuplicatedAccountException() {
-        super("중복된 아이디 입니다.");
+        super(ExceptionMessages.DUPLICATED_ACCOUNT);
     }
 
     public DuplicatedAccountException(String message) {

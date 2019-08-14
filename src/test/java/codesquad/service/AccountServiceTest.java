@@ -6,6 +6,7 @@ import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -41,10 +42,21 @@ public class AccountServiceTest {
     @Mock
     private PasswordEncoder passwordEncoder;
 
+    private Account account;
+
+    @Before
+    public void setUp() throws Exception {
+        account = new Account()
+                .setEmail(EMAIL)
+                .setPassword(PASSWORD)
+                .setName(NAME)
+                .setPhoneNumber(PHONE_NUMBER)
+                .build();
+    }
 
     @Test
     public void createAccount() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
+
         SignUpDTO signUpDTO = new SignUpDTO(EMAIL, PASSWORD, PASSWORD, PHONE_NUMBER, NAME);
         when(accountRepository.save(new Account(signUpDTO))).thenReturn(account);
 
@@ -54,7 +66,6 @@ public class AccountServiceTest {
 
     @Test(expected = RuntimeException.class)
     public void create_notMatchedPassword() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         SignUpDTO signUpDTO = new SignUpDTO(EMAIL, PASSWORD, WRONG_PASSWORD, PHONE_NUMBER, NAME);
         when(accountRepository.save(new Account(signUpDTO))).thenReturn(account);
 
@@ -63,7 +74,6 @@ public class AccountServiceTest {
 
     @Test
     public void findAccount() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
 
         assertThat(accountService.findByEmail(EMAIL).getEmail()).isEqualTo(EMAIL);
@@ -71,7 +81,6 @@ public class AccountServiceTest {
 
     @Test
     public void login() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
         when(passwordEncoder.matches(PASSWORD, accountRepository.findByEmail(EMAIL).orElseThrow(NotFoundAccountException::new).getPassword())).thenReturn(true);
@@ -81,7 +90,6 @@ public class AccountServiceTest {
 
     @Test(expected = NotFoundAccountException.class)
     public void login_wrong_email() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
 
@@ -90,7 +98,6 @@ public class AccountServiceTest {
 
     @Test(expected = UnAuthenticationException.class)
     public void login_wrong_password() {
-        Account account = new Account(EMAIL, PASSWORD, NAME, PHONE_NUMBER);
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
 

@@ -1,5 +1,6 @@
 package codesquad.dto;
 
+import codesquad.utils.ExceptionMessages;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,9 +13,10 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoginDTO {
-    @NotBlank(message = "이메일을 입력해 주세요.")
+
+    @NotBlank(message = ExceptionMessages.NO_EMAIL)
     private String email;
 
-    @NotBlank(message = "비밀번호를 입력해 주세요.")
+    @NotBlank(message = ExceptionMessages.NO_PASSWORD)
     private String password;
 }
