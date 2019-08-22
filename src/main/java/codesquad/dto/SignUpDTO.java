@@ -1,6 +1,5 @@
 package codesquad.dto;
 
-import codesquad.utils.ExceptionMessages;
 import codesquad.utils.RegexUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,20 +15,19 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 public class SignUpDTO {
 
-    @NotBlank(message = ExceptionMessages.NO_EMAIL)
-    @Email(message = ExceptionMessages.INVALID_EMAIL)
+    @NotBlank
+    @Email
     private String email;
 
-    @Pattern(regexp = RegexUtil.REGEX_PASSWORD, message = ExceptionMessages.INVALID_PASSWORD)
+    @Pattern(regexp = RegexUtil.REGEX_PASSWORD)
     private String password;
 
     private String passwordForCheck;
 
-    @NotBlank(message = ExceptionMessages.NO_PHONE_NUMBER)
-    @Pattern(regexp = RegexUtil.REGEX_PHONE_NUMBER, message = ExceptionMessages.INVALID_PHONE_NUMBER)
+    @Pattern(regexp = RegexUtil.REGEX_PHONE_NUMBER)
     private String phoneNumber;
 
-    @Size(min = 2, max = 15, message = ExceptionMessages.INVALID_NAME)
+    @Size(min = 2, max = 15)
     private String name;
 
     public boolean isCheckingPassWordMatch() {
