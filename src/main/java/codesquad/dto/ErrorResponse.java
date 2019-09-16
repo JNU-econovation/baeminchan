@@ -1,11 +1,13 @@
 package codesquad.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@NoArgsConstructor
 public class ErrorResponse {
     private int status;
     private List<ValidateError> errors;
@@ -23,5 +25,14 @@ public class ErrorResponse {
 
     public void addErrorMessage(ValidateError validateError) {
         errors.add(validateError);
+    }
+
+    @Override
+    public String toString() {
+        return "ErrorResponse(" +
+                "status=" + status +
+                ", errors=" + errors +
+                ", field='" + field + '\'' +
+                ')';
     }
 }
