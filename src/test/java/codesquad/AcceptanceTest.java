@@ -1,14 +1,13 @@
-package support.test;
+package codesquad;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import lombok.RequiredArgsConstructor;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -18,7 +17,7 @@ public abstract class AcceptanceTest {
     @Autowired
     private TestRestTemplate template;
 
-    @Resource
+    @Autowired
     private AccountRepository accountRepository;
 
     public TestRestTemplate template() {

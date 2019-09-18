@@ -3,6 +3,7 @@ package codesquad.web;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.service.AccountService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -18,13 +19,11 @@ import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
+@RequiredArgsConstructor
 public class ApiAccountController {
     private Logger log = LoggerFactory.getLogger(ApiAccountController.class);
-    private final AccountService accountService;
 
-    public ApiAccountController(AccountService accountService) {
-        this.accountService = accountService;
-    }
+    private final AccountService accountService;
 
     @PostMapping("/member/sign-up")
     public ResponseEntity<Void> createAccount(@Valid @RequestBody SignUpDTO signUpDTO) {

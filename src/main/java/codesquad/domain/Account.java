@@ -33,6 +33,7 @@ public class Account {
     private String phoneNumber;
 
     @Column(nullable = false, name = "account_type")
+    @Enumerated(EnumType.STRING)
     private AccountType accountType = USER;
 
     public Account setEmail(String email) {

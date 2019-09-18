@@ -2,6 +2,7 @@ package codesquad.exception;
 
 import codesquad.dto.ErrorResponse;
 import codesquad.dto.ValidateError;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +15,16 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
 @RestControllerAdvice
+@RequiredArgsConstructor
 public class GlobalExceptionControllerAdvice {
     private Logger log = LoggerFactory.getLogger(GlobalExceptionControllerAdvice.class);
-    private final MessageSourceAccessor messageSourceAccessor;
 
-    @Autowired
-    public GlobalExceptionControllerAdvice(MessageSourceAccessor messageSourceAccessor) {
-        this.messageSourceAccessor = messageSourceAccessor;
-    }
+    private final MessageSourceAccessor messageSourceAccessor;
 
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)

@@ -9,6 +9,7 @@ import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
 import codesquad.exception.UnMatchedCheckingPasswordException;
 import codesquad.utils.SessionUtil;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,15 +18,11 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 
 @Service
+@RequiredArgsConstructor
 public class AccountService {
     private static final Logger log = LoggerFactory.getLogger(AccountService.class);
     private final AccountRepository accountRepository;
     private final PasswordEncoder passwordEncoder;
-
-    public AccountService(AccountRepository accountRepository, PasswordEncoder passwordEncoder) {
-        this.accountRepository = accountRepository;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     public Account create(SignUpDTO signUpDTO) {
 
