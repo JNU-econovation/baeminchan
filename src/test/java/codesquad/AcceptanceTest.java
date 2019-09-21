@@ -2,8 +2,9 @@ package codesquad;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
-import lombok.RequiredArgsConstructor;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -12,7 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class AcceptanceTest {
-    private static final String DEFAULT_LOGIN_USER = "bellroute@gmail.com";
+    private static final Logger log = LoggerFactory.getLogger(AcceptanceTest.class);
+    private static final String DEFAULT_LOGIN_USER = "bellrout@gmail.com";
+    private static final String ADMIN_LOGIN_USER = "admin@gmail.com";
 
     @Autowired
     private TestRestTemplate template;
@@ -38,6 +41,12 @@ public abstract class AcceptanceTest {
         return findByEmailId(DEFAULT_LOGIN_USER);
     }
 
+    protected Account adminAccount() {
+        createAdminAccount();
+
+        return findByEmailId(ADMIN_LOGIN_USER);
+    }
+
     private void createDefaultUser() {
         Account account = new Account()
                 .setEmail(DEFAULT_LOGIN_USER)
@@ -46,10 +55,25 @@ public abstract class AcceptanceTest {
                 .setPhoneNumber("010-0000-0000")
                 .build();
 
+        log.info("defaultUser: {}", account.toString());
+        accountRepository.save(account);
+    }
+
+    private void createAdminAccount() {
+        Account account = new Account()
+                .setEmail(ADMIN_LOGIN_USER)
+                .setName("admin")
+                .setPassword("1111aaaa")
+                .setPhoneNumber("010-0000-0001")
+                .changeToAdmin()
+                .build();
+
+        log.info("Admin: {}", account.toString());
         accountRepository.save(account);
     }
 
     protected Account findByEmailId(String accountId) {
+        log.info("email: {}", accountId);
         return accountRepository.findByEmail(accountId).get();
     }
 }

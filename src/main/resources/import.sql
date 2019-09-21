@@ -1,1 +1,1 @@
-INSERT INTO account (id, email, password, name, phone_number, account_type) values (1l, 'bellroute@gmail.com', 'abcd1234', 'bell', '010-0000-0000', 'USER');
+INSERT INTO account (id, email, password, name, phone_number, account_type) values (999l, 'bellroute@gmail.com', 'abcd1234', 'bell', '010-0000-0000', 'USER');

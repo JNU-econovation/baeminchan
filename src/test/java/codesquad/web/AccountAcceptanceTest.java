@@ -3,7 +3,6 @@ package codesquad.web;
 import codesquad.AcceptanceTest;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.SignUpDTO;
-import lombok.RequiredArgsConstructor;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,11 +12,11 @@ import org.springframework.http.ResponseEntity;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RequiredArgsConstructor
 public class AccountAcceptanceTest extends AcceptanceTest {
     private static final Logger log = LoggerFactory.getLogger(AccountAcceptanceTest.class);
 
-    private final AccountRepository accountRepository;
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Test
     public void createForm() {
@@ -27,11 +26,11 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void createAccount() {
-        String email = "bellroute@gmail.com";
+        String email = "bellrout@gmail.com";
 
         SignUpDTO signUpDTO = new SignUpDTO(email, "1234abcd", "1234abcd", "010-0000-0000", "bell");
 
-        ResponseEntity<String> response = template().postForEntity("/join/sign-up", signUpDTO, String.class);
+        ResponseEntity<String> response = template().postForEntity("/member/sign-up", signUpDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
     }

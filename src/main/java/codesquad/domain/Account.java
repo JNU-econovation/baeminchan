@@ -84,10 +84,21 @@ public class Account {
         this.password = signUpDTO.getPassword();
         this.name = signUpDTO.getName();
         this.phoneNumber = signUpDTO.getPhoneNumber();
-        this.accountType = USER;
     }
 
     public boolean matchPassword(String password) {
         return this.password.equals(password);
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", accountType=" + accountType +
+                '}';
     }
 }
