@@ -44,7 +44,7 @@ function signUp() {
                 let log = "";
 
                 for (let i = 0; i < result.errors.length; i++) {
-                    log += result.errors[i] + "\n";
+                    log += result.errors[i].errorMessage + "\n";
                 }
 
                 alert(log);
@@ -98,7 +98,7 @@ function checkLoginForm() {
                 let log = "";
 
                 for (let i = 0; i < result.errors.length; i++) {
-                    log += result.errors[i] + "\n";
+                    log += result.errors[i].errorMessage + "\n";
                 }
 
                 alert(log);
