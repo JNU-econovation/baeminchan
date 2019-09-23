@@ -1,5 +1,6 @@
 package codesquad.domain;
 
+import codesquad.dto.CategoryDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import org.hibernate.annotations.Where;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Getter
@@ -50,6 +52,8 @@ public class Category {
 
     public Category parent(Category parent) {
         this.parent = parent;
+        parent.addChild(this);
+
         return this;
     }
 
@@ -70,7 +74,21 @@ public class Category {
         this.parent = parent;
     }
 
+    public List<Category> getChildrenExceptDeleted() {
+        return this.children.stream().filter(child -> !child.isDeleted()).collect(Collectors.toList());
+    }
+
     public void delete() {
         this.deleted = true;
+    }
+
+    public boolean hasParent() {
+        return parent != null;
+    }
+
+    public void update(CategoryDTO categoryDTO) {
+        this.title = categoryDTO.getTitle();
+        this.parent = categoryDTO.getParent();
+        this.children = categoryDTO.getChildren();
     }
 }
