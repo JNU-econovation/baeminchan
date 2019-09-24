@@ -2,6 +2,7 @@ package codesquad.exception;
 
 import codesquad.dto.ErrorResponse;
 import codesquad.dto.ValidateError;
+import codesquad.response.ResponseGenerator;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -68,36 +69,34 @@ public class GlobalExceptionControllerAdvice {
     public ResponseEntity<ErrorResponse> handleUnMatchedCheckingPasswordException(UnMatchedCheckingPasswordException e) {
         log.error("handleUnMatchedCheckingPasswordException : {}", e);
 
-        return makeResponseEntity(HttpStatus.BAD_REQUEST, e);
+        return ResponseGenerator.generateErrorResponseEntity(HttpStatus.BAD_REQUEST, e);
     }
 
     @ExceptionHandler(value = DuplicatedAccountException.class)
     public ResponseEntity<ErrorResponse> handleDuplicatedAccountException(DuplicatedAccountException e) {
         log.error("handleDuplicatedAccountException : {}", e);
 
-        return makeResponseEntity(HttpStatus.BAD_REQUEST, e);
+        return ResponseGenerator.generateErrorResponseEntity(HttpStatus.BAD_REQUEST, e);
     }
 
     @ExceptionHandler(value = NotFoundAccountException.class)
     public ResponseEntity<ErrorResponse> handleNotFoundAccountException(NotFoundAccountException e) {
         log.error("handleNotFoundAccountException : {}", e);
 
-        return makeResponseEntity(HttpStatus.NOT_FOUND, e);
+        return ResponseGenerator.generateErrorResponseEntity(HttpStatus.NOT_FOUND, e);
     }
 
     @ExceptionHandler(value = UnAuthenticationException.class)
     public ResponseEntity<ErrorResponse> handleUnAuthenticationException(UnAuthenticationException e) {
         log.error("handleUnAuthenticationException : {}", e);
 
-        return makeResponseEntity(HttpStatus.FORBIDDEN, e);
+        return ResponseGenerator.generateErrorResponseEntity(HttpStatus.FORBIDDEN, e);
     }
 
-    private ResponseEntity<ErrorResponse> makeResponseEntity(HttpStatus status, Exception e) {
-        ErrorResponse response = new ErrorResponse(status.value());
-        response.addErrorMessage(new ValidateError("" ,e.getMessage()));
+    @ExceptionHandler(value = NotAdminException.class)
+    public ResponseEntity<ErrorResponse> handleUnAuthenticationException(NotAdminException e) {
+        log.error("handleUnAuthenticationException : {}", e);
 
-        log.debug("check : {}", e);
-
-        return new ResponseEntity<>(response, status);
+        return ResponseGenerator.generateErrorResponseEntity(HttpStatus.FORBIDDEN, e);
     }
 }

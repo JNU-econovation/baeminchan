@@ -1,5 +1,7 @@
 package codesquad.response;
 
+import codesquad.dto.ErrorResponse;
+import codesquad.dto.ValidateError;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -19,5 +21,12 @@ public class ResponseGenerator {
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         return new ResponseEntity<T>(headers, httpStatus);
+    }
+
+    public static ResponseEntity<ErrorResponse> generateErrorResponseEntity(HttpStatus status, Exception e) {
+        ErrorResponse response = new ErrorResponse(status.value());
+        response.addErrorMessage(new ValidateError("" ,e.getMessage()));
+
+        return new ResponseEntity<>(response, status);
     }
 }

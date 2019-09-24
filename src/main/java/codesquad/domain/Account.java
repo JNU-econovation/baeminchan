@@ -23,6 +23,7 @@ public class Account {
     @Column(nullable = false, name = "email")
     private String email;
 
+    @Lob
     @Column(nullable = false, name = "password")
     private String password;
 
@@ -100,5 +101,9 @@ public class Account {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", accountType=" + accountType +
                 '}';
+    }
+
+    public boolean isAdmin() {
+        return this.accountType.equals(ADMIN);
     }
 }
