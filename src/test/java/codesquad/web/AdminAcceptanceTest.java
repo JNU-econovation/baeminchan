@@ -18,10 +18,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class AdminAcceptanceTest extends AcceptanceTest {
-    private static final String CREATE_CATEGORY_URL = "/admin/category/create";
-    private static final String SHOW_CATEGORY_URL = "/admin/category/show/";
-    private static final String UPDATE_CATEGORY_URL = "/admin/category/update/";
-    private static final String DELETE_CATEGORY_URL = "/admin/category/delete/";
+    private static final String BASE_URL = "/admin/category/";
     private static final String DEFAULT_MENU_TITLE = "pizza";
 
     private static final Logger log = LoggerFactory.getLogger(AdminAcceptanceTest.class);
@@ -59,7 +56,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
         categoryRepository.deleteAll();
 
         ResponseEntity<String> adminResponse = adminTemplate
-                .postForEntity(CREATE_CATEGORY_URL, mockMenu, String.class);
+                .postForEntity(BASE_URL + "create", mockMenu, String.class);
 
 
         assertAll(
@@ -75,7 +72,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
         categoryRepository.deleteAll();
 
         ResponseEntity<String> userResponse = userTemplate
-                .postForEntity(CREATE_CATEGORY_URL, mockMenu, String.class);
+                .postForEntity(BASE_URL + "create", mockMenu, String.class);
 
         assertAll(
                 () -> assertThat(userResponse.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN),
@@ -90,7 +87,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
         categoryRepository.deleteAll();
 
         ResponseEntity<String> adminResponse = adminTemplate
-                .getForEntity(SHOW_CATEGORY_URL, String.class);
+                .getForEntity(BASE_URL + mockMenu.getId(), String.class);
 
         assertThat(adminResponse.getStatusCode()).isEqualTo(HttpStatus.FOUND);
     }
@@ -98,7 +95,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
     @Test
     public void show_category_when_not_admin() {
         ResponseEntity<String> userResponse = userTemplate
-                .getForEntity(SHOW_CATEGORY_URL, String.class);
+                .getForEntity(BASE_URL + mockMenu.getId(), String.class);
 
         assertThat(userResponse.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
     }
@@ -111,7 +108,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
 
         Category updatedMenu = categoryRepository.findByTitle(DEFAULT_MENU_TITLE).orElseThrow(RuntimeException::new);
 
-        String url = UPDATE_CATEGORY_URL + updatedMenu.getId();
+        String url = BASE_URL + updatedMenu.getId() + "/update";
 
         updatedMenu.title("chicken")
                 .build();
@@ -134,7 +131,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
 
         Category updatedMenu = categoryRepository.findByTitle(DEFAULT_MENU_TITLE).orElseThrow(RuntimeException::new);
 
-        String url = UPDATE_CATEGORY_URL + updatedMenu.getId();
+        String url = BASE_URL + updatedMenu.getId() + "/update";
 
         updatedMenu.title("chicken")
                 .build();
@@ -157,7 +154,7 @@ public class AdminAcceptanceTest extends AcceptanceTest {
 
         Category deletedMenu = categoryRepository.findByTitle(DEFAULT_MENU_TITLE).orElseThrow(RuntimeException::new);
 
-        String url = DELETE_CATEGORY_URL + deletedMenu.getId();
+        String url = BASE_URL + deletedMenu.getId() + "/delete";
 
         deletedMenu.delete();
 
@@ -178,12 +175,12 @@ public class AdminAcceptanceTest extends AcceptanceTest {
 
         Category deletedMenu = categoryRepository.findByTitle(DEFAULT_MENU_TITLE).orElseThrow(RuntimeException::new);
 
-        String url = DELETE_CATEGORY_URL + deletedMenu.getId();
+        String url = BASE_URL + deletedMenu.getId() + "/delete";
 
         deletedMenu.delete();
 
         ResponseEntity<String> userResponse = userTemplate
-                .postForEntity(DELETE_CATEGORY_URL, HttpMethod.DELETE, String.class, deletedMenu);
+                .postForEntity(url, HttpMethod.DELETE, String.class, deletedMenu);
 
         assertAll(
                 () -> assertThat(userResponse.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN),

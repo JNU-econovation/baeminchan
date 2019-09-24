@@ -45,6 +45,12 @@ public class Category {
         this.deleted = category.deleted;
     }
 
+    public Category(CategoryDTO categoryDTO) {
+        this.title = categoryDTO.getTitle();
+        this.parent = categoryDTO.getParent();
+        this.children = categoryDTO.getChildren();
+    }
+
     public Category title(String title) {
         this.title = title;
         return this;
@@ -75,7 +81,8 @@ public class Category {
     }
 
     public List<Category> getChildrenExceptDeleted() {
-        return this.children.stream().filter(child -> !child.isDeleted()).collect(Collectors.toList());
+        return this.children.stream()
+                .filter(child -> !child.isDeleted()).collect(Collectors.toList());
     }
 
     public void delete() {

@@ -6,6 +6,9 @@ import codesquad.dto.CategoryDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class CategoryService {
@@ -30,17 +33,25 @@ public class CategoryService {
         return categoryRepository.findById(id).orElseThrow(RuntimeException::new);
     }
 
-    public Category update(CategoryDTO categoryDTO) {
-        Category updatedCategory = findByTitle(categoryDTO.getTitle());
+    public Category update(Long id, CategoryDTO categoryDTO) {
+        Category updatedCategory = findById(id);
         updatedCategory.update(categoryDTO);
 
         return categoryRepository.save(updatedCategory);
     }
 
-    public Category delete(Category child) {
-        Category deletedCategory = findById(child.getId());
+    public Category delete(Long id) {
+        Category deletedCategory = findById(id);
         deletedCategory.delete();
 
         return categoryRepository.save(deletedCategory);
+    }
+
+    public List<Category> findAll() {
+        List<Category> categoryList = categoryRepository.findAll();
+        categoryList.stream()
+                .filter(category -> !category.isDeleted()).collect(Collectors.toList());
+
+        return categoryList;
     }
 }

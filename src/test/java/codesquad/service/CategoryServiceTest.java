@@ -89,12 +89,12 @@ public class CategoryServiceTest {
     public void update() {
         CategoryDTO categoryDTO = new CategoryDTO(child.getTitle(), child.getParent(), child.getChildren());
 
-        assertThat(categoryService.update(categoryDTO).getId()).isEqualTo(child.getId());
+        assertThat(categoryService.update(child.getId(), categoryDTO).getId()).isEqualTo(child.getId());
     }
 
     @Test
     public void delete() {
-        assertThat(categoryService.delete(child).isDeleted()).isTrue();
+        assertThat(categoryService.delete(child.getId()).isDeleted()).isTrue();
     }
 
     @Test
