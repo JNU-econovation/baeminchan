@@ -3,6 +3,7 @@ package codesquad.service;
 import codesquad.domain.Category;
 import codesquad.domain.CategoryRepository;
 import codesquad.dto.CategoryDTO;
+import codesquad.exception.NotFoundCategoryException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,12 +43,12 @@ public class CategoryService {
 
     public Category findByTitle(String title) {
 
-        return categoryRepository.findByTitle(title).orElseThrow(RuntimeException::new);
+        return categoryRepository.findByTitle(title).orElseThrow(NotFoundCategoryException::new);
     }
 
     public Category findById(Long id) {
 
-        return categoryRepository.findById(id).orElseThrow(RuntimeException::new);
+        return categoryRepository.findById(id).orElseThrow(NotFoundCategoryException::new);
     }
 
     public Category update(Long id, CategoryDTO categoryDTO) {

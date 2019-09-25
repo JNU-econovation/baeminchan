@@ -87,7 +87,7 @@ public class CategoryServiceTest {
 
     @Test
     public void update() {
-        CategoryDTO categoryDTO = new CategoryDTO(child.getTitle(), child.getParent().getId());
+        CategoryDTO categoryDTO = new CategoryDTO(child.getTitle(), null);
 
         assertThat(categoryService.update(child.getId(), categoryDTO).getId()).isEqualTo(child.getId());
     }
