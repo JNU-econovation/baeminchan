@@ -3,13 +3,15 @@ package codesquad.dto;
 import lombok.*;
 import org.springframework.lang.Nullable;
 
+import javax.validation.constraints.NotBlank;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class CategoryDTO {
 
-    @NonNull
+    @NotBlank
     private String title;
 
     @Nullable

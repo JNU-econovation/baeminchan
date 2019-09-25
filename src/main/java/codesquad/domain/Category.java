@@ -1,7 +1,6 @@
 package codesquad.domain;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,17 +28,15 @@ public class Category {
     @Where(clause = "deleted='false'")
     @JoinColumn(name = "parentId", nullable = true)
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
-    //TODO jpa 순환참조 해결하기. 프론트 단 crud 마무리
+    @JsonIgnore
     private Category parent;
 
     @Where(clause = "deleted='false'")
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "parentId", nullable = true)
-    @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
     private List<Category> children = new ArrayList<>();
 
-    @Column(name = "deleted")
+    @Column(name = "deleted", nullable = false)
     private boolean deleted = false;
 
     public Category(Category category) {
@@ -91,20 +88,27 @@ public class Category {
         return parent != null;
     }
 
-    public void update(String title, Category parent) {
+    public void update(String title, Category newParent) {
         this.title = title;
 
-        if (!this.parent.isSame(parent)) {
+        if (this.parent == null) {
+
+            newParent.addChild(this);
+            this.parent = newParent;
+        }
+
+        if (!this.parent.isSame(newParent)) {
             Category pastParent = this.parent;
 
-            parent.addChild(this);
+            newParent.addChild(this);
             pastParent.getChildren().remove(this);
 
-            this.parent = parent;
+            this.parent = newParent;
         }
     }
 
     private boolean isSame(Category category) {
+
         return this.id.equals(category.getId());
     }
 

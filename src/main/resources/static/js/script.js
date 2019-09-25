@@ -90,8 +90,8 @@ function updateCategory() {
             }
         })
     }).then(({result, status}) => {
-        result = JSON.parse(result);
         if (status >= 400) {
+            result = JSON.parse(result);
             console.log('error 가 발생했네요 ', result.status);
             console.log(result);
 

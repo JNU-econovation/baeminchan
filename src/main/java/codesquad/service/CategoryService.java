@@ -51,6 +51,8 @@ public class CategoryService {
     }
 
     public Category update(Long id, CategoryDTO categoryDTO) {
+        log.info("update categoryDTO: {}", categoryDTO.toString());
+
         Category updatedCategory = findById(id);
         Category newParent = findById(categoryDTO.getParentId());
 
@@ -78,9 +80,8 @@ public class CategoryService {
 
     public List<Category> findAll() {
         List<Category> categoryList = categoryRepository.findAll();
-        categoryList.stream()
-                .filter(category -> !category.isDeleted()).collect(Collectors.toList());
 
-        return categoryList;
+        return categoryList.stream()
+                .filter(category -> !category.isDeleted()).collect(Collectors.toList());
     }
 }
