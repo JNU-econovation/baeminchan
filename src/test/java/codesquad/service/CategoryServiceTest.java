@@ -54,7 +54,7 @@ public class CategoryServiceTest {
     public void create_no_parent() {
         when(categoryRepository.save(child)).thenReturn(child);
 
-        assertThat(categoryService.create(child)).isEqualTo(child);
+        assertThat(categoryService.create(new CategoryDTO(child.getTitle(), null))).isEqualTo(child);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class CategoryServiceTest {
 
         when(categoryRepository.save(category)).thenReturn(category);
 
-        Category dbCategory = categoryService.create(category);
+        Category dbCategory = categoryService.create(new CategoryDTO(child.getTitle(), null));
 
         assertThat(dbCategory).isEqualTo(category);
         assertThat(dbCategory.getParent()).isEqualTo(parent);
@@ -87,7 +87,7 @@ public class CategoryServiceTest {
 
     @Test
     public void update() {
-        CategoryDTO categoryDTO = new CategoryDTO(child.getTitle(), child.getParent(), child.getChildren());
+        CategoryDTO categoryDTO = new CategoryDTO(child.getTitle(), child.getParent().getId());
 
         assertThat(categoryService.update(child.getId(), categoryDTO).getId()).isEqualTo(child.getId());
     }

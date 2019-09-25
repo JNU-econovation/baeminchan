@@ -1,19 +1,29 @@
 package codesquad.dto;
 
-import codesquad.domain.Category;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.List;
+import lombok.*;
+import org.springframework.lang.Nullable;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class CategoryDTO {
+
+    @NonNull
     private String title;
-    private Category parent;
-    private List<Category> children;
+
+    @Nullable
+    private Long parentId;
+
+    @Override
+    public String toString() {
+        return "CategoryDTO{" +
+                "title='" + title + '\'' +
+                ", parentId=" + parentId +
+                '}';
+    }
+
+    public boolean hasParentId() {
+        return parentId != null;
+    }
 }

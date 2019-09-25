@@ -1,6 +1,7 @@
 package codesquad.domain;
 
-import codesquad.dto.CategoryDTO;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,11 +29,14 @@ public class Category {
     @Where(clause = "deleted='false'")
     @JoinColumn(name = "parentId", nullable = true)
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
+    //TODO jpa 순환참조 해결하기. 프론트 단 crud 마무리
     private Category parent;
 
     @Where(clause = "deleted='false'")
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "parentId", nullable = true)
+    @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class)
     private List<Category> children = new ArrayList<>();
 
     @Column(name = "deleted")
@@ -43,12 +47,6 @@ public class Category {
         this.parent = category.parent;
         this.children = category.children;
         this.deleted = category.deleted;
-    }
-
-    public Category(CategoryDTO categoryDTO) {
-        this.title = categoryDTO.getTitle();
-        this.parent = categoryDTO.getParent();
-        this.children = categoryDTO.getChildren();
     }
 
     public Category title(String title) {
@@ -93,9 +91,24 @@ public class Category {
         return parent != null;
     }
 
-    public void update(CategoryDTO categoryDTO) {
-        this.title = categoryDTO.getTitle();
-        this.parent = categoryDTO.getParent();
-        this.children = categoryDTO.getChildren();
+    public void update(String title, Category parent) {
+        this.title = title;
+
+        if (!this.parent.isSame(parent)) {
+            Category pastParent = this.parent;
+
+            parent.addChild(this);
+            pastParent.getChildren().remove(this);
+
+            this.parent = parent;
+        }
+    }
+
+    private boolean isSame(Category category) {
+        return this.id.equals(category.getId());
+    }
+
+    public void update(String title) {
+        this.title = title;
     }
 }

@@ -16,15 +16,13 @@ public class CategoryController {
     @GetMapping("/admin")
     public String adminPage(Model model) {
 
-        model.addAttribute("categoryList", categoryService.findAll());
-
         return "admin";
     }
 
-    @GetMapping("/admin/category/{id}")
-    public String categoryDetailPage(@PathVariable Long id, Model model) {
+    @GetMapping("/admin/category")
+    public String categoryPage(Model model) {
 
-        model.addAttribute("category", categoryService.findById(id));
+        model.addAttribute("categoryList", categoryService.findAll());
 
         return "category";
     }
