@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배민찬 - 카테고리 관리 페이지</title>
+</head>
+<body>
+<h1>카테고리 관리</h1>
+
+<div class="categoryList">
+    {{#categoryList}}
+    <h5>
+        <a>id: {{id}} 이름: {{title}} 상위 카테고리: {{parent.id}}</a>
+        {{#children}}
+        <a> 하위 카테고리: {{id}}</a>
+        {{/children}}
+    </h5>
+    {{/categoryList}}
+</div>
+
+<h5>=================================================================</h5>
+
+
+<div class="modal fade" id="savePostsModal" tabindex="-1" role="dialog" aria-labelledby="savePostsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="savePostsLabel">카테고리 등록</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="title">카테고리 이름</label>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="메뉴 이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="parentId"> 상위 카테고리 id </label>
+                        <input type="text" class="form-control" name="parentId" id="parentId"
+                               placeholder="상위 카테고리를 입력하세요">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btn-save" onclick=createCategory()>등록</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h5>=================================================================</h5>
+
+<div class="modal fade" id="updatePostsModal" tabindex="-1" role="dialog" aria-labelledby="savePostsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="updatePostsLabel">카테고리 수정</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="title">수정할 카테고리 id</label>
+                        <input type="text" class="form-control" name="category-id" id="category-id"
+                               placeholder="메뉴 이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">수정할 카테고리 이름</label>
+                        <input type="text" class="form-control" name="update-title" id="update-title"
+                               placeholder="메뉴 이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label for="parentId"> 상위 카테고리 id </label>
+                        <input type="text" class="form-control" name="update-parentId" id="update-parentId"
+                               placeholder="상위 카테고리를 입력하세요">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btn-update" onclick=updateCategory()>수정</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h5>=================================================================</h5>
+
+<div class="modal fade" id="deletePostsModal" tabindex="-1" role="dialog" aria-labelledby="savePostsLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="deletePostsLabel">카테고리 삭제</h3>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="title">삭제할 카테고리 id</label>
+                        <input type="text" class="form-control" name="category-id" id="delete-category-id"
+                               placeholder="메뉴 이름을 입력하세요">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btn-delete" onclick=deleteCategory()>수정</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/script.js"></script>
+</body>
+</html>
