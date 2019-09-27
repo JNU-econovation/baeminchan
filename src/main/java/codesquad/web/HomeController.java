@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 @RequiredArgsConstructor
-public class AccountController {
+public class HomeController {
 
     private final PromotionService promotionService;
 
