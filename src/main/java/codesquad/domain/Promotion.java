@@ -30,4 +30,8 @@ public class Promotion {
 
     @Column(nullable = false, name = "final_price")
     private int finalPrice;
+
+    public boolean isType(PromotionType promotionType) {
+        return this.type == promotionType;
+    }
 }

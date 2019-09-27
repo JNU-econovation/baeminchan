@@ -1,10 +1,16 @@
 package codesquad.web;
 
+import codesquad.service.PromotionService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@RequiredArgsConstructor
 public class AccountController {
+
+    private final PromotionService promotionService;
 
     @GetMapping("/join")
     public String joinForm() {
@@ -22,7 +28,11 @@ public class AccountController {
     }
 
     @GetMapping("/")
-    public String main() {
+    public String main(Model model) {
+        model.addAttribute("subDishList", promotionService.findSubDishList());
+        model.addAttribute("mainDishList", promotionService.findMainDishList());
+        model.addAttribute("soupAndStewDishList", promotionService.findSoupAndStewList());
+
         return "/index";
     }
 }
