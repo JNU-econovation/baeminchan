@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "promotion")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -23,7 +24,7 @@ public class Promotion {
     @Column(nullable = false, name = "title")
     private String title;
 
-    @Column(nullable = false, name = "describe")
+    @Column(nullable = false, name = "description")
     private String describe;
 
     @Column(nullable = false, name = "original_price")

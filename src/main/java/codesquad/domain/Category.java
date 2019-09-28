@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Entity
+@Table(name = "category")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
