@@ -8,7 +8,7 @@ import codesquad.exception.DuplicatedAccountException;
 import codesquad.exception.NotFoundAccountException;
 import codesquad.exception.UnAuthenticationException;
 import codesquad.exception.UnMatchedCheckingPasswordException;
-import codesquad.utils.SessionUtil;
+import codesquad.sequrity.HttpSessionUtils;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +47,15 @@ public class AccountService {
         Account account = findByEmail(loginDTO.getEmail());
 
         matchPassword(loginDTO.getPassword(), account.getPassword());
-        session.setAttribute(SessionUtil.SESSIONED_USER, account);
+        session.setAttribute(HttpSessionUtils.SESSIONED_USER, account);
+
+        return account;
+    }
+
+    public Account login(LoginDTO loginDTO) {
+        Account account = findByEmail(loginDTO.getEmail());
+
+        matchPassword(loginDTO.getPassword(), account.getPassword());
 
         return account;
     }

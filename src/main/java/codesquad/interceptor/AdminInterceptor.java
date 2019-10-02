@@ -2,7 +2,7 @@ package codesquad.interceptor;
 
 import codesquad.domain.Account;
 import codesquad.exception.NotAdminException;
-import codesquad.utils.SessionUtil;
+import codesquad.sequrity.HttpSessionUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -15,9 +15,9 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("-------------------------log-----------------------------");
-        log.info("session info: {}", request.getSession().getAttribute(SessionUtil.SESSIONED_USER));
+        log.info("session info: {}", request.getSession().getAttribute(HttpSessionUtils.SESSIONED_USER));
 
-        Object session = request.getSession().getAttribute(SessionUtil.SESSIONED_USER);
+        Object session = request.getSession().getAttribute(HttpSessionUtils.SESSIONED_USER);
         Account sessionedAccount = (Account) session;
 
         if (sessionedAccount == null) {
