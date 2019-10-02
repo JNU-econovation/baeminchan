@@ -40,7 +40,7 @@ public class ApiCategoryController {
     public ResponseEntity<Category> createCategory(@RequestBody CategoryDTO categoryDTO) {
         log.info("dto.parent: {}", categoryDTO.toString());
 
-        return ResponseGenerator.generateResponseEntity(categoryService.create(categoryDTO), HttpStatus.FOUND);
+        return ResponseGenerator.generateResponseEntity(categoryService.create(categoryDTO), HttpStatus.OK);
     }
 
     @PutMapping("/admin/category/{id}/update")
@@ -50,7 +50,7 @@ public class ApiCategoryController {
     }
 
     @DeleteMapping("/admin/category/{id}/delete")
-    public ResponseEntity<Category> deleteCategory(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCategory(@PathVariable Long id) {
         categoryService.delete(id);
 
         return ResponseGenerator.generateResponseEntity(HttpStatus.OK);

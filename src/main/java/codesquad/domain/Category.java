@@ -1,5 +1,6 @@
 package codesquad.domain;
 
+import codesquad.dto.CategoryDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,6 +36,7 @@ public class Category {
     @Where(clause = "deleted='false'")
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "parentId", nullable = true)
+    @JsonIgnore
     private List<Category> children = new ArrayList<>();
 
     @Column(name = "deleted", nullable = false)
@@ -76,11 +78,6 @@ public class Category {
         this.parent = parent;
     }
 
-    public List<Category> getChildrenExceptDeleted() {
-        return this.children.stream()
-                .filter(child -> !child.isDeleted()).collect(Collectors.toList());
-    }
-
     public void delete() {
         this.deleted = true;
     }
@@ -115,5 +112,18 @@ public class Category {
 
     public void update(String title) {
         this.title = title;
+    }
+
+    public CategoryDTO changeToDTO() {
+        return new CategoryDTO(this.title, this.parent.getId());
+    }
+
+    public Category createDefaultCategory(String defaultMenuTitle) {
+        this.id = 9999l;
+        this.title = defaultMenuTitle;
+        this.parent = null;
+        this.children = null;
+
+        return this.build();
     }
 }

@@ -1,4 +1,6 @@
-INSERT INTO account (id, email, password, user_name, phone_number, account_type) values (99, 'bellroute@gmail.com', '$2a$10$oYGZgRu04d64kco7Q2fGOu.AtzQL9xiadKgL72TL9I0MOiy11MqFW', 'bell', '010-0000-0000', 'ADMIN');
+INSERT INTO account (id, email, password, user_name, phone_number, account_type) values (99, 'admin@gmail.com', '$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', 'bell', '010-0000-0000', 'ADMIN');
+INSERT INTO account (id, email, password, user_name, phone_number, account_type) values (99, 'user@gmail.com', '$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', 'bell', '010-0000-0000', 'ADMIN');
+
 
 INSERT INTO promotion (id, promotion_type, title, description, original_price, final_price) values (30, 'SUB_DISH', 'pizza', '곧 죽어도 피자', 7000, 5000);
 INSERT INTO promotion (id, promotion_type, title, description, original_price, final_price) values (31, 'SUB_DISH', '피자', '곧 죽어도 피자', 7000, 5000);
