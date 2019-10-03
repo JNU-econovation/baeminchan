@@ -16,7 +16,7 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.Silent.class)
 @SpringBootTest
 public class CategoryServiceTest {
     private static final String CHILD_TITLE = "곧 죽어도 피자";
