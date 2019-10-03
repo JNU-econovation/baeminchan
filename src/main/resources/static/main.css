@@ -1270,6 +1270,7 @@ a:focus {
   display: flex;
   height: 100%;
   overflow: hidden;
+  transition: all 2s;
 }
 
 .sliding-list-box .content-group>li {
@@ -1412,6 +1413,7 @@ a:focus {
   right: 0;
   top: 0;
   bottom: 0;
+  transition: all 2s;
 }
 
 #main-visual .img-box a {
@@ -1438,18 +1440,25 @@ a:focus {
 
 #main-visual .img-box .img-2 {
   background-image: url(./img/img-main-visual-slide_2.jpg);
+  transform: translateX(100%);
 }
 
 #main-visual .img-box .img-3 {
   background-image: url(./img/img-main-visual-slide_3.jpg);
+  transform: translateX(200%);
+
 }
 
 #main-visual .img-box .img-4 {
   background-image: url(./img/img-main-visual-slide_4.jpg);
+  transform: translateX(300%);
+
 }
 
 #main-visual .img-box .img-5 {
   background-image: url(./img/img-main-visual-slide_5.jpg);
+  transform: translateX(400%);
+
 }
 
 #main-visual .direction-btn-box {
