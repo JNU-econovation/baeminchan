@@ -24,6 +24,6 @@ public class ControllerAdviceTest extends AcceptanceTest {
 
         ResponseEntity<ErrorResponse> response = template().postForEntity("/member/sign-up", signUpFalse, ErrorResponse.class);
 
-        assertThat(response.toString()).isEqualTo("");
+        assertThat(response.toString()).contains("비밀번호 형식이 올바르지 않습니다.");
     }
 }

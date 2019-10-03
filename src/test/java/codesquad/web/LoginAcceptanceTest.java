@@ -16,31 +16,30 @@ import codesquad.AcceptanceTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RequiredArgsConstructor
 public class LoginAcceptanceTest extends AcceptanceTest {
     private static final Logger log = LoggerFactory.getLogger(LoginAcceptanceTest.class);
 
-    private final AccountRepository accountRepository;
-    private final PasswordEncoder passwordEncoder;
+    @Autowired
+    private  AccountRepository accountRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Test
     public void login() {
-        String email = "bellroute@gmail.com";
         String password = "abcd1234";
 
         Account account = defaultUser();
         account.setPassword(passwordEncoder.encode(password));
         accountRepository.save(account);
 
-        LoginDTO request = new LoginDTO(email, password);
+        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
 
 
         ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
-        assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
-        assertThat(accountRepository.findByEmail(email).orElseThrow(NotFoundAccountException::new).matchPassword(password));
-        assertThat(response.getHeaders().getLocation().getPath()).startsWith("/");
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
     }
 
     @Test
@@ -57,14 +56,13 @@ public class LoginAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void login_wrong_password() {
-        String email = "bellroute@gmail.com";
         String password = "wrong_password";
 
-        LoginDTO request = new LoginDTO(email, password);
+        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
         ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
-        assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
-        assertThat(accountRepository.findByEmail(email).orElseThrow(RuntimeException::new).matchPassword(password));
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).orElseThrow(RuntimeException::new).matchPassword(password));
     }
 }

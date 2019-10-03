@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public abstract class AcceptanceTest {
     private static final Logger log = LoggerFactory.getLogger(AcceptanceTest.class);
-    private static final String DEFAULT_LOGIN_USER = "user@gmail.com";
+    public static final String DEFAULT_LOGIN_USER = "user@gmail.com";
     private static final String ADMIN_LOGIN_USER = "admin@gmail.com";
 
     @Autowired

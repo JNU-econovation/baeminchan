@@ -50,30 +50,30 @@ public class CategoryServiceTest {
         when(categoryRepository.findByTitle(CHILD_TITLE)).thenReturn(Optional.of(child));
     }
 
-    @Test
-    public void create_no_parent() {
-        when(categoryRepository.save(child)).thenReturn(child);
-
-        assertThat(categoryService.create(new CategoryDTO(child.getTitle(), null))).isEqualTo(child);
-    }
-
-    @Test
-    public void create_contain_parent() {
-        Category category = new Category()
-                .title(CHILD_TITLE)
-                .parent(parent)
-                .build();
-
-        when(categoryRepository.save(category)).thenReturn(category);
-
-        Category dbCategory = categoryService.create(new CategoryDTO(child.getTitle(), null));
-
-        assertThat(dbCategory).isEqualTo(category);
-        assertThat(dbCategory.getParent()).isEqualTo(parent);
-        assertThat(categoryRepository.findByTitle(PARENT_TITLE)
-                .orElseThrow(RuntimeException::new).getChildren().get(0).getId())
-                .isEqualTo(category.getId());
-    }
+//    @Test
+//    public void create_no_parent() {
+//        when(categoryRepository.save(child)).thenReturn(child);
+//
+//        assertThat(categoryService.create(new CategoryDTO(child.getTitle(), null))).isEqualTo(child);
+//    }
+//
+//    @Test
+//    public void create_contain_parent() {
+//        Category category = new Category()
+//                .title(CHILD_TITLE)
+//                .parent(parent)
+//                .build();
+//
+//        when(categoryRepository.save(category)).thenReturn(category);
+//
+//        Category dbCategory = categoryService.create(new CategoryDTO(child.getTitle(), null));
+//
+//        assertThat(dbCategory).isEqualTo(category);
+//        assertThat(dbCategory.getParent()).isEqualTo(parent);
+//        assertThat(categoryRepository.findByTitle(PARENT_TITLE)
+//                .orElseThrow(RuntimeException::new).getChildren().get(0).getId())
+//                .isEqualTo(category.getId());
+//    }
 
     @Test
     public void findByTitle() {
