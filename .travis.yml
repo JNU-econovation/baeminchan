@@ -22,9 +22,14 @@ script:
 
   - "./mvnw clean package"
 
+before_deploy:
+  - zip -r baeminchan *
+  - mkdir -p deploy
+  - mv baeminchan.zip deploy/baeminchan.zip
 
 deploy:
   - provider: s3
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
     access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
     secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: baeminchan-deploy # 6-3-3에서 생성한 S3 버킷
