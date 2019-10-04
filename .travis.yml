@@ -16,8 +16,8 @@ cache:
     - $HOME/.m2
 
 script:
-  - ./mvnw clean install
-  - ./mvnw clean package
+  - "./mvnw clean install"
+  - "./mvnw clean package"
 
 # CI 실행 완료시 메일로 알람
 notifications:
