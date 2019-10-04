@@ -9,6 +9,9 @@ branches:
 before_install:
   - chmod +x mvnw
 
+install:
+  - "./mvnw clean install"
+
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -16,7 +19,7 @@ cache:
     - $HOME/.m2
 
 script:
-  - "./mvnw clean install"
+
   - "./mvnw clean package"
 
 # CI 실행 완료시 메일로 알람
