@@ -6,9 +6,6 @@ branches:
   only:
     - step3
 
-before_install:
-  - chmod +x mvnw
-
 # Travis CI 서버의 Home
 cache:
   directories:
