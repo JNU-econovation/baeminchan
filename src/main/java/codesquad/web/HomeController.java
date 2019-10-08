@@ -1,10 +1,13 @@
 package codesquad.web;
 
+import codesquad.sequrity.HttpSessionUtils;
 import codesquad.service.PromotionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequiredArgsConstructor
@@ -34,5 +37,12 @@ public class HomeController {
         model.addAttribute("soupAndStewDishList", promotionService.findSoupAndStewList());
 
         return "/index";
+    }
+
+    @GetMapping("/logout")
+    public String logout(HttpSession session) {
+        session.removeAttribute(HttpSessionUtils.SESSIONED_USER);
+
+        return "redirect:/login";
     }
 }
