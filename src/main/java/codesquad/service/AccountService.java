@@ -8,6 +8,7 @@ import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.exception.*;
 import codesquad.sequrity.HttpSessionUtils;
+import codesquad.sequrity.RandomPasswordGenerator;
 import codesquad.utils.ExceptionMessages;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -23,6 +24,7 @@ public class AccountService {
     private static final Logger log = LoggerFactory.getLogger(AccountService.class);
     private final AccountRepository accountRepository;
     private final PasswordEncoder passwordEncoder;
+    private final RandomPasswordGenerator randomPasswordGenerator;
 
     public Account create(SignUpDTO signUpDTO) {
 
@@ -85,7 +87,11 @@ public class AccountService {
             throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
         }
 
-        return null;
-        //TODO 임시비밀번호 발급하는 방법으로 해야함
+        String newPassword = randomPasswordGenerator.generatePassword();
+
+        account.setPassword(newPassword);
+        accountRepository.save(account);
+
+        return newPassword;
     }
 }

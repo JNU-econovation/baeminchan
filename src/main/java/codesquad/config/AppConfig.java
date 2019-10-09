@@ -1,5 +1,6 @@
 package codesquad.config;
 
+import codesquad.sequrity.RandomPasswordGenerator;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,5 +19,10 @@ public class AppConfig {
     @Bean
     public MessageSourceAccessor messageSourceAccessor(MessageSource messageSource) {
         return new MessageSourceAccessor(messageSource);
+    }
+
+    @Bean
+    public RandomPasswordGenerator randomPasswordGenerator() {
+        return new RandomPasswordGenerator();
     }
 }
