@@ -88,7 +88,9 @@ public class AccountService {
 
         String newPassword = RandomPasswordGenerator.generatePassword();
 
-        account.setPassword(newPassword);
+
+
+        account.setPassword(passwordEncoder.encode(newPassword));
         accountRepository.save(account);
 
         return newPassword;

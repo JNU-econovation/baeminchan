@@ -43,14 +43,14 @@ public class ApiAccountController {
     }
 
     @PostMapping("/member/find/request")
-    public ResponseEntity<String> findId(@RequestBody FindingEmailDTO findingEmailDTO) {
+    public ResponseEntity<String> findId(@Valid @RequestBody FindingEmailDTO findingEmailDTO) {
         String foundId = accountService.findId(findingEmailDTO);
 
         return ResponseGenerator.generateResponseEntity(foundId, HttpStatus.FOUND);
     }
 
     @PostMapping("/member/find-pass/request")
-    public ResponseEntity<String> findPassword(@RequestBody FindingPasswordDTO findingPasswordDTO) {
+    public ResponseEntity<String> findPassword(@Valid @RequestBody FindingPasswordDTO findingPasswordDTO) {
         String temporaryPassword = accountService.findPassword(findingPasswordDTO);
 
         return ResponseGenerator.generateResponseEntity(temporaryPassword, HttpStatus.FOUND);

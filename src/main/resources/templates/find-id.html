@@ -46,7 +46,9 @@
             <h2 class="subtlt_h2">아이디 찾기</h2>
             <ul class="breadcrumb">
                 <li>
-                    <a href="/">홈</a>
+                    <a href="/">
+                        <strong>홈</strong>
+                    </a>
                 </li>
                 <li>
                     <a href="/member/login">
@@ -105,8 +107,8 @@
                                     <br class="clear">
                                     <span class="tb_in_txt">기존 아이디로 로그인하거나 비밀번호를 찾으려면?</span>
                                     <br class="clear">
-                                    <a href="/login">로그인</a>|
-                                    <a href="/member/find_step1.php">비밀번호 찾기</a>
+                                    <a href="/member/login">로그인</a>|
+                                    <a href="/member/find-pass">비밀번호 찾기</a>
                                     <p class="tb_in_txt" id="duplicate_continue" style="margin-top: 30px">이 번호를 사용하시려면, 인증 해주세요.</p>
                                 </div>
                             </td>
@@ -117,7 +119,7 @@
                 </fieldset>
 
                 <div class="btn_area center mt40">
-                    <button type="submit" class="btn btn_mint btn_big" onclick=signUp()>
+                    <button type="submit" class="btn btn_mint btn_big" onclick=findId()>
                         <span>아이디 찾기</span>
                     </button>
                 </div>
