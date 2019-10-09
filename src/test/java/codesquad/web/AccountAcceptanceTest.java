@@ -65,10 +65,36 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void find_password() {
+        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "user", "010-0000-1111");
+
+        ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
+        assertThat(response.getBody().contains("1111aaaa")).isTrue();
     }
 
     @Test
-    public void findPasswordFail() {
+    public void findPasswordFail_when_wrong_id() {
+        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("wrongwrong@gmail.com", "user", "010-0000-1111");
 
+        ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().contains("1111aaaa")).isFalse();
+    }
+
+    @Test
+    public void findPasswordFail_when_wrong_name() {
+        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "wrong", "010-0000-1111");
+
+        ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().contains("1111aaaa")).isFalse();
+    }
+
+    @Test
+    public void findPasswordFail_when_wrong_phoneNumber() {FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "user", "010-0000-0000");
+
+        ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().contains("1111aaaa")).isTrue();
     }
 }

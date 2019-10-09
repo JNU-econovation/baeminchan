@@ -89,6 +89,14 @@ public class AccountServiceTest {
     }
 
     @Test
+    public void findPassword() {
+        when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.ofNullable(account));
+        FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO(EMAIL, NAME, PHONE_NUMBER);
+
+        assertThat(accountService.findPassword(findingPasswordDTO)).isEqualTo(PASSWORD);
+    }
+
+    @Test
     public void login() {
         HttpSession session = new MockHttpSession();
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
