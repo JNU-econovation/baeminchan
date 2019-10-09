@@ -34,4 +34,24 @@ public class AccountAcceptanceTest extends AcceptanceTest {
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(accountRepository.findByEmail(email).isPresent()).isTrue();
     }
+
+    @Test
+    public void find_id() {
+
+    }
+
+    @Test
+    public void find_password() {
+
+    }
+
+    @Test
+    public void findIdFail() {
+
+    }
+
+    @Test
+    public void findPasswordFail() {
+
+    }
 }
