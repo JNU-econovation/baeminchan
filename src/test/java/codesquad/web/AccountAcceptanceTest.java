@@ -3,6 +3,7 @@ package codesquad.web;
 import codesquad.AcceptanceTest;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.FindingEmailDTO;
+import codesquad.dto.FindingPasswordDTO;
 import codesquad.dto.SignUpDTO;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -65,7 +66,7 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void find_password() {
-        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "user", "010-0000-1111");
+        FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO("user@gmail.com", "user", "010-0000-1111");
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
@@ -74,7 +75,7 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void findPasswordFail_when_wrong_id() {
-        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("wrongwrong@gmail.com", "user", "010-0000-1111");
+        FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO("wrongwrong@gmail.com", "user", "010-0000-1111");
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
@@ -83,18 +84,18 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void findPasswordFail_when_wrong_name() {
-        FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "wrong", "010-0000-1111");
+        FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO("user@gmail.com", "wrong", "010-0000-1111");
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().contains("1111aaaa")).isFalse();
+        assertThat(response.getBody().contains("임시비밀번호")).isFalse();
     }
 
     @Test
-    public void findPasswordFail_when_wrong_phoneNumber() {FindingPasswordDTO findingPasswordDTO = new FindingPAsswordDTO("user@gmail.com", "user", "010-0000-0000");
+    public void findPasswordFail_when_wrong_phoneNumber() {FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO("user@gmail.com", "user", "010-0000-0000");
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().contains("1111aaaa")).isTrue();
+        assertThat(response.getBody().contains("임시비밀번호")).isTrue();
     }
 }

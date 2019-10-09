@@ -3,6 +3,7 @@ package codesquad.service;
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.FindingEmailDTO;
+import codesquad.dto.FindingPasswordDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.exception.*;
@@ -74,5 +75,17 @@ public class AccountService {
         }
 
         return account.getEmail();
+    }
+
+    public String findPassword(FindingPasswordDTO findingPasswordDTO) {
+        Account account = accountRepository.findByEmail(findingPasswordDTO.getEmail())
+                .orElseThrow(() -> new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO));
+
+        if (!account.hasSameName(findingPasswordDTO.getName()) && !account.hasSamePhoneNumber(findingPasswordDTO.getPhoneNumber())) {
+            throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
+        }
+
+        return null;
+        //TODO 임시비밀번호 발급하는 방법으로 해야함
     }
 }
