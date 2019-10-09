@@ -2,6 +2,7 @@ package codesquad.service;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.FindingEmailDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.exception.NotFoundAccountException;
@@ -80,10 +81,9 @@ public class AccountServiceTest {
     }
 
     @Test
-    public void findEmailByName() {
-        //TODO 이름으로 디비에서 찾고 전화번호 일치하는지 체크
-        when(accountRepository.findByName(NAME)).thenReturn(account);
-        FindingIdDTO findingIdDTO = new FindingIdDTO(NAME, PHONE_NUMBER);
+    public void findIdByName() {
+        when(accountRepository.findByName(NAME)).thenReturn(Optional.ofNullable(account));
+        FindingEmailDTO findingIdDTO = new FindingEmailDTO(NAME, PHONE_NUMBER);
 
         assertThat(accountService.findId(findingIdDTO)).isEqualTo(EMAIL);
     }

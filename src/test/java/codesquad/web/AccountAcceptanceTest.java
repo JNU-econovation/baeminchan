@@ -2,6 +2,7 @@ package codesquad.web;
 
 import codesquad.AcceptanceTest;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.FindingEmailDTO;
 import codesquad.dto.SignUpDTO;
 import org.junit.Test;
 import org.slf4j.Logger;
@@ -39,18 +40,31 @@ public class AccountAcceptanceTest extends AcceptanceTest {
     public void find_id() {
         FindingEmailDTO findingEmailDTO = new FindingEmailDTO("user", "010-0000-1111");
 
-        ResponseEntity<String> response = template().getForEntity("/member/find/request", findingEmailDTO, String.class);
+        ResponseEntity<String> response = template().postForEntity("/member/find/request", findingEmailDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
         assertThat(response.getBody().contains("user@gmail.com")).isTrue();
     }
 
     @Test
-    public void find_password() {
+    public void findIdFail_when_wrong_name() {
+        FindingEmailDTO findingEmailDTO = new FindingEmailDTO("틀렸지롱", "010-0000-1111");
+
+        ResponseEntity<String> response = template().postForEntity("/member/find/request", findingEmailDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().contains("user@gmail.com")).isFalse();
     }
 
     @Test
-    public void findIdFail() {
+    public void findIdFail_when_wrong_phoneNumber() {
+        FindingEmailDTO findingEmailDTO = new FindingEmailDTO("user", "010-0000-0000");
 
+        ResponseEntity<String> response = template().postForEntity("/member/find/request", findingEmailDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        assertThat(response.getBody().contains("user@gmail.com")).isFalse();
+    }
+
+    @Test
+    public void find_password() {
     }
 
     @Test

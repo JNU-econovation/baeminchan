@@ -2,13 +2,12 @@ package codesquad.service;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.FindingEmailDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
-import codesquad.exception.DuplicatedAccountException;
-import codesquad.exception.NotFoundAccountException;
-import codesquad.exception.UnAuthenticationException;
-import codesquad.exception.UnMatchedCheckingPasswordException;
+import codesquad.exception.*;
 import codesquad.sequrity.HttpSessionUtils;
+import codesquad.utils.ExceptionMessages;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,5 +63,16 @@ public class AccountService {
         if (!passwordEncoder.matches(requestPassword, actualPassword)) {
             throw new UnAuthenticationException();
         }
+    }
+
+    public String findId(FindingEmailDTO findingIdDTO) {
+        Account account = accountRepository.findByName(findingIdDTO.getName())
+                .orElseThrow(() -> new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO));
+
+        if (!account.hasSamePhoneNumber(findingIdDTO.getPhoneNumber())) {
+            throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
+        }
+
+        return account.getEmail();
     }
 }
