@@ -21,7 +21,7 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
         Account sessionedAccount = (Account) session;
 
         if (sessionedAccount == null) {
-            response.sendRedirect("/login");
+            response.sendRedirect("/member/login");
 
             return false;
         }
