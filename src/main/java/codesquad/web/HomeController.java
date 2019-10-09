@@ -1,6 +1,7 @@
 package codesquad.web;
 
 import codesquad.sequrity.HttpSessionUtils;
+import codesquad.service.CategoryService;
 import codesquad.service.PromotionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpSession;
 public class HomeController {
 
     private final PromotionService promotionService;
+    private final CategoryService categoryService;
 
     @GetMapping("/member/join")
     public String joinForm_another() {
@@ -40,6 +42,7 @@ public class HomeController {
         model.addAttribute("subDishList", promotionService.findSubDishList());
         model.addAttribute("mainDishList", promotionService.findMainDishList());
         model.addAttribute("soupAndStewDishList", promotionService.findSoupAndStewList());
+        model.addAttribute("parentCategoryList", categoryService.findParentList());
 
         return "/index";
     }
