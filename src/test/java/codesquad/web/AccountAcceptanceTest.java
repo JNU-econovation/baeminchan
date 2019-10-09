@@ -37,12 +37,15 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void find_id() {
+        FindingEmailDTO findingEmailDTO = new FindingEmailDTO("user", "010-0000-1111");
 
+        ResponseEntity<String> response = template().getForEntity("/member/find/request", findingEmailDTO, String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
+        assertThat(response.getBody().contains("user@gmail.com")).isTrue();
     }
 
     @Test
     public void find_password() {
-
     }
 
     @Test
