@@ -22,7 +22,7 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
     @Test
     public void createForm() {
-        ResponseEntity<String> response = template().getForEntity("/join", String.class);
+        ResponseEntity<String> response = template().getForEntity("/member/join", String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
 

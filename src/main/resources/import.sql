@@ -64,6 +64,7 @@ INSERT INTO category (id, title, parent_id, deleted) values (60, '반찬장인',
 INSERT INTO category (id, title, parent_id, deleted) values (61, '셰프의요리', 8, false);
 INSERT INTO category (id, title, parent_id, deleted) values (62, '전국맛집', 8, false);
 INSERT INTO category (id, title, parent_id, deleted) values (63, '키즈관', 8, false);
+INSERT INTO category (id, title, parent_id, deleted) values (64, '민석이형 네이버 축하해요', 1, false);
 
 
 INSERT INTO promotion (id, promotion_type, title, description, original_price, final_price) values (30, 'SUB_DISH', 'pizza', '곧 죽어도 피자', 7000, 5000);
