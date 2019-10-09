@@ -1,6 +1,7 @@
 package codesquad.web;
 
 import codesquad.dto.FindingEmailDTO;
+import codesquad.dto.FindingPasswordDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.response.ResponseGenerator;
@@ -46,5 +47,12 @@ public class ApiAccountController {
         String foundId = accountService.findId(findingEmailDTO);
 
         return ResponseGenerator.generateResponseEntity(foundId, HttpStatus.FOUND);
+    }
+
+    @PostMapping("/member/find-pass/request")
+    public ResponseEntity<String> findPassword(@RequestBody FindingPasswordDTO findingPasswordDTO) {
+        String temporaryPassword = accountService.findPassword(findingPasswordDTO);
+
+        return ResponseGenerator.generateResponseEntity(temporaryPassword, HttpStatus.FOUND);
     }
 }

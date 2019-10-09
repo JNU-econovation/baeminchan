@@ -24,7 +24,6 @@ public class AccountService {
     private static final Logger log = LoggerFactory.getLogger(AccountService.class);
     private final AccountRepository accountRepository;
     private final PasswordEncoder passwordEncoder;
-    private final RandomPasswordGenerator randomPasswordGenerator;
 
     public Account create(SignUpDTO signUpDTO) {
 
@@ -83,11 +82,11 @@ public class AccountService {
         Account account = accountRepository.findByEmail(findingPasswordDTO.getEmail())
                 .orElseThrow(() -> new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO));
 
-        if (!account.hasSameName(findingPasswordDTO.getName()) && !account.hasSamePhoneNumber(findingPasswordDTO.getPhoneNumber())) {
+        if (!account.hasSameName(findingPasswordDTO.getName()) || !account.hasSamePhoneNumber(findingPasswordDTO.getPhoneNumber())) {
             throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
         }
 
-        String newPassword = randomPasswordGenerator.generatePassword();
+        String newPassword = RandomPasswordGenerator.generatePassword();
 
         account.setPassword(newPassword);
         accountRepository.save(account);

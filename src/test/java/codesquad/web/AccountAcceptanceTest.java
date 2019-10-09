@@ -70,7 +70,6 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
-        assertThat(response.getBody().contains("1111aaaa")).isTrue();
     }
 
     @Test
@@ -79,7 +78,6 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().contains("1111aaaa")).isFalse();
     }
 
     @Test
@@ -88,7 +86,6 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().contains("임시비밀번호")).isFalse();
     }
 
     @Test
@@ -96,6 +93,5 @@ public class AccountAcceptanceTest extends AcceptanceTest {
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
-        assertThat(response.getBody().contains("임시비밀번호")).isTrue();
     }
 }
