@@ -485,3 +485,774 @@ org.springframework.web.bind.MethodArgumentNotValidException: Validation failed 
 [INFO ] 16:29:48.458 c.e.GlobalExceptionControllerAdvice - error message: 이메일을 입력해 주세요.
 [INFO ] 16:29:48.458 c.e.GlobalExceptionControllerAdvice - error code: NotBlank.loginDTO.password
 [INFO ] 16:29:48.458 c.e.GlobalExceptionControllerAdvice - error message: 비밀번호를 입력해 주세요.
+[WARN ] 16:36:54.380 o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+[WARN ] 16:37:06.406 o.s.web.servlet.PageNotFound - Request method 'GET' not supported
+[INFO ] 16:41:06.450 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@77847718: startup date [Tue Oct 08 16:27:40 KST 2019]; root of context hierarchy
+[INFO ] 16:41:06.452 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 16:41:06.453 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 16:41:06.453 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:41:06.454 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 16:41:06.455 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 16:50:49.289 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 41455 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 16:50:49.291 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 16:50:49.319 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@595b007d: startup date [Tue Oct 08 16:50:49 KST 2019]; root of context hierarchy
+[INFO ] 16:50:50.194 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c6c0f750] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.227 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$458a172a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.242 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.245 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.258 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.260 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$587141c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.307 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:50:50.513 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 16:50:50.523 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:50:50.530 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 16:50:50.530 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 16:50:50.534 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 16:50:50.604 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 16:50:50.604 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1285 ms
+[INFO ] 16:50:50.718 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 16:50:50.722 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 16:50:50.722 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 16:50:50.722 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 16:50:50.722 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 16:50:50.749 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 16:50:50.896 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:50:50.907 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 16:50:51.028 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 16:50:51.030 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 16:50:51.057 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 16:50:51.152 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 16:50:51.228 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 16:50:51.238 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 16:50:51.660 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 16:50:51.668 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:50:52.071 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:50:52.257 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@595b007d: startup date [Tue Oct 08 16:50:49 KST 2019]; root of context hierarchy
+[WARN ] 16:50:52.280 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 16:50:52.300 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 16:50:52.301 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 16:50:52.304 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 16:50:52.304 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 16:50:52.304 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 16:50:52.305 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 16:50:52.305 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 16:50:52.305 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 16:50:52.306 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 16:50:52.307 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 16:50:52.307 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm()
+[INFO ] 16:50:52.307 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 16:50:52.307 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 16:50:52.307 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/find/id],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 16:50:52.308 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/find/password],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 16:50:52.308 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 16:50:52.310 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 16:50:52.310 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 16:50:52.328 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:50:52.328 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:50:52.338 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 16:50:52.356 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 16:50:52.518 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 16:50:52.519 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 16:50:52.523 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 16:50:52.533 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:50:52.555 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 16:50:52.563 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 16:50:52.566 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.502 seconds (JVM running for 4.194)
+[INFO ] 16:50:58.060 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 16:50:58.060 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 16:50:58.073 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+[INFO ] 16:50:58.118 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 16:55:35.134 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@595b007d: startup date [Tue Oct 08 16:50:49 KST 2019]; root of context hierarchy
+[INFO ] 16:55:35.136 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 16:55:35.136 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 16:55:35.137 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:55:35.137 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 16:55:35.138 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 16:55:38.597 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 42115 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 16:55:38.600 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 16:55:38.651 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:55:38 KST 2019]; root of context hierarchy
+[INFO ] 16:55:39.436 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bfe48d6a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.459 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3eadad44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.470 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.472 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.482 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.484 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$5194d7e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.514 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:55:39.662 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 16:55:39.670 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:55:39.675 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 16:55:39.676 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 16:55:39.678 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 16:55:39.739 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 16:55:39.739 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1088 ms
+[INFO ] 16:55:39.825 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 16:55:39.828 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 16:55:39.828 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 16:55:39.828 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 16:55:39.828 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 16:55:39.848 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 16:55:39.961 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:55:39.971 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 16:55:40.067 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 16:55:40.068 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 16:55:40.090 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 16:55:40.154 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 16:55:40.213 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 16:55:40.220 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 16:55:40.542 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 16:55:40.548 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:55:40.832 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:55:41.005 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:55:38 KST 2019]; root of context hierarchy
+[WARN ] 16:55:41.036 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 16:55:41.061 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 16:55:41.062 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 16:55:41.065 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 16:55:41.066 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 16:55:41.066 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 16:55:41.066 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 16:55:41.067 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 16:55:41.067 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 16:55:41.068 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 16:55:41.069 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 16:55:41.069 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 16:55:41.069 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 16:55:41.069 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 16:55:41.070 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 16:55:41.070 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 16:55:41.072 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 16:55:41.072 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 16:55:41.095 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:55:41.095 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:55:41.108 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 16:55:41.132 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 16:55:41.344 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 16:55:41.345 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 16:55:41.350 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 16:55:41.358 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:55:41.380 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 16:55:41.387 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 16:55:41.390 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.237 seconds (JVM running for 3.908)
+[INFO ] 16:55:48.860 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 16:55:48.860 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 16:55:48.873 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+[INFO ] 16:55:48.912 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 16:56:14.469 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:55:38 KST 2019]; root of context hierarchy
+[INFO ] 16:56:14.471 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 16:56:14.471 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 16:56:14.472 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:56:14.473 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 16:56:14.474 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 16:57:14.719 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 42399 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 16:57:14.721 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 16:57:14.761 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5158b42f: startup date [Tue Oct 08 16:57:14 KST 2019]; root of context hierarchy
+[INFO ] 16:57:15.712 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9bd3a6ff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.743 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$1a9cc6d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.755 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.757 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.768 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.769 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$2d83f177] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.802 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:57:15.961 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 16:57:15.971 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:57:15.977 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 16:57:15.977 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 16:57:15.981 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 16:57:16.043 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 16:57:16.043 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1282 ms
+[INFO ] 16:57:16.129 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 16:57:16.132 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 16:57:16.132 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 16:57:16.132 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 16:57:16.132 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 16:57:16.154 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 16:57:16.275 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:57:16.284 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 16:57:16.368 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 16:57:16.368 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 16:57:16.392 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 16:57:16.455 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 16:57:16.512 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 16:57:16.521 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 16:57:16.853 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 16:57:16.859 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:57:17.177 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:57:17.344 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5158b42f: startup date [Tue Oct 08 16:57:14 KST 2019]; root of context hierarchy
+[WARN ] 16:57:17.365 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 16:57:17.385 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 16:57:17.386 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 16:57:17.389 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 16:57:17.389 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 16:57:17.389 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 16:57:17.390 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 16:57:17.390 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 16:57:17.391 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 16:57:17.391 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 16:57:17.392 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 16:57:17.392 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 16:57:17.392 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 16:57:17.392 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 16:57:17.392 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 16:57:17.393 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 16:57:17.394 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 16:57:17.395 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 16:57:17.413 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:57:17.413 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:57:17.423 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 16:57:17.441 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 16:57:17.587 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 16:57:17.588 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 16:57:17.593 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 16:57:17.602 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:57:17.624 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 16:57:17.633 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 16:57:17.636 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.233 seconds (JVM running for 3.97)
+[INFO ] 16:57:23.003 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 16:57:23.003 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 16:57:23.015 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+[INFO ] 16:57:23.058 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 16:59:00.838 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5158b42f: startup date [Tue Oct 08 16:57:14 KST 2019]; root of context hierarchy
+[INFO ] 16:59:00.840 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 16:59:00.840 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 16:59:00.841 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:59:00.842 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 16:59:00.843 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 16:59:04.275 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 42706 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 16:59:04.277 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 16:59:04.308 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:59:04 KST 2019]; root of context hierarchy
+[INFO ] 16:59:05.147 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$514dbb0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.176 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$d016dae4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.189 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.191 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.202 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.204 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$e2fe0582] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.237 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 16:59:05.435 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 16:59:05.452 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:59:05.463 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 16:59:05.464 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 16:59:05.468 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 16:59:05.581 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 16:59:05.581 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1273 ms
+[INFO ] 16:59:05.696 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 16:59:05.699 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 16:59:05.700 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 16:59:05.700 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 16:59:05.700 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 16:59:05.723 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 16:59:05.842 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:59:05.852 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 16:59:05.986 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 16:59:05.987 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 16:59:06.013 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 16:59:06.097 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 16:59:06.166 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 16:59:06.174 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 16:59:06.543 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 16:59:06.549 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 16:59:06.856 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:59:07.047 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:59:04 KST 2019]; root of context hierarchy
+[WARN ] 16:59:07.076 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 16:59:07.102 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 16:59:07.103 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 16:59:07.106 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 16:59:07.106 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 16:59:07.107 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 16:59:07.107 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 16:59:07.107 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 16:59:07.108 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 16:59:07.108 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 16:59:07.109 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 16:59:07.109 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 16:59:07.109 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 16:59:07.110 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 16:59:07.110 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 16:59:07.110 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 16:59:07.112 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 16:59:07.112 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 16:59:07.135 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:59:07.135 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 16:59:07.147 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 16:59:07.171 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 16:59:07.363 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 16:59:07.365 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 16:59:07.369 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 16:59:07.379 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 16:59:07.402 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 16:59:07.410 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 16:59:07.413 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.391 seconds (JVM running for 4.049)
+[INFO ] 16:59:34.134 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 16:59:34.134 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 16:59:34.146 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+[INFO ] 16:59:34.186 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:00:33.184 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@36902638: startup date [Tue Oct 08 16:59:04 KST 2019]; root of context hierarchy
+[INFO ] 17:00:33.186 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:00:33.186 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:00:33.187 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:00:33.188 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:00:33.189 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:01:31.098 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 43159 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:01:31.102 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:01:31.147 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6572421: startup date [Tue Oct 08 17:01:31 KST 2019]; root of context hierarchy
+[INFO ] 17:01:32.191 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c6448a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.224 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$828f6464] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.239 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.243 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.257 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.259 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$95768f02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.302 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:01:32.517 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:01:32.527 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:01:32.532 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:01:32.532 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:01:32.535 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:01:32.611 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:01:32.612 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1465 ms
+[INFO ] 17:01:32.716 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:01:32.718 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:01:32.719 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:01:32.719 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:01:32.719 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:01:32.742 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:01:32.867 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:01:32.879 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:01:33.011 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:01:33.012 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:01:33.043 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:01:33.128 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:01:33.208 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:01:33.219 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:01:33.592 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:01:33.600 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:01:33.905 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:01:34.129 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6572421: startup date [Tue Oct 08 17:01:31 KST 2019]; root of context hierarchy
+[WARN ] 17:01:34.167 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:01:34.203 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:01:34.205 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:01:34.210 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:01:34.211 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:01:34.211 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:01:34.212 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:01:34.213 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:01:34.214 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:01:34.214 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:01:34.216 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:01:34.216 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:01:34.216 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:01:34.217 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:01:34.217 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:01:34.217 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:01:34.220 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:01:34.220 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:01:34.252 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:01:34.252 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:01:34.270 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:01:34.300 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:01:34.554 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:01:34.556 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:01:34.561 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:01:34.571 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:01:34.596 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:01:34.605 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:01:34.608 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.849 seconds (JVM running for 4.657)
+[INFO ] 17:01:44.485 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:01:44.485 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:01:44.498 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+[INFO ] 17:01:44.539 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:02:21.099 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6572421: startup date [Tue Oct 08 17:01:31 KST 2019]; root of context hierarchy
+[INFO ] 17:02:21.101 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:02:21.101 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:02:21.102 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:02:21.103 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:02:21.104 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:02:24.338 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 43280 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:02:24.341 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:02:24.381 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ec7ffd3: startup date [Tue Oct 08 17:02:24 KST 2019]; root of context hierarchy
+[INFO ] 17:02:25.228 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e2577db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.252 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$acee97b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.263 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.265 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.276 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.277 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$bfd5c253] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.309 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:02:25.479 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:02:25.489 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:02:25.496 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:02:25.496 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:02:25.499 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:02:25.564 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:02:25.564 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1183 ms
+[INFO ] 17:02:25.670 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:02:25.673 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:02:25.673 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:02:25.673 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:02:25.673 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:02:25.699 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:02:25.827 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:02:25.837 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:02:25.947 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:02:25.948 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:02:25.974 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:02:26.054 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:02:26.122 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:02:26.131 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:02:26.541 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:02:26.547 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:02:26.850 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:02:27.028 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ec7ffd3: startup date [Tue Oct 08 17:02:24 KST 2019]; root of context hierarchy
+[WARN ] 17:02:27.056 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:02:27.081 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:02:27.082 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:02:27.085 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:02:27.085 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:02:27.085 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:02:27.086 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:02:27.086 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:02:27.086 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:02:27.087 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:02:27.088 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:02:27.088 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:02:27.088 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:02:27.088 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:02:27.089 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:02:27.089 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:02:27.091 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:02:27.091 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:02:27.113 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:02:27.113 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:02:27.125 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:02:27.148 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:02:27.330 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:02:27.331 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:02:27.336 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:02:27.344 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:02:27.366 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:02:27.373 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:02:27.377 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.269 seconds (JVM running for 3.794)
+[INFO ] 17:02:37.402 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:02:37.402 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:02:37.414 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+[INFO ] 17:02:37.455 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:02:59.205 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ec7ffd3: startup date [Tue Oct 08 17:02:24 KST 2019]; root of context hierarchy
+[INFO ] 17:02:59.206 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:02:59.207 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:02:59.208 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:02:59.208 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:02:59.209 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:03:01.593 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 43393 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:03:01.595 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:03:01.628 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:03:01 KST 2019]; root of context hierarchy
+[INFO ] 17:03:02.428 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45f26619] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.453 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$c4bb85f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.465 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.467 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.477 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.478 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$d7a2b091] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.510 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:03:02.670 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:03:02.679 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:03:02.685 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:03:02.685 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:03:02.688 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:03:02.750 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:03:02.751 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1123 ms
+[INFO ] 17:03:02.843 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:03:02.846 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:03:02.846 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:03:02.846 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:03:02.846 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:03:02.868 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:03:03.016 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:03:03.028 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:03:03.167 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:03:03.167 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:03:03.192 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:03:03.269 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:03:03.334 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:03:03.342 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:03:03.708 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:03:03.716 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:03:04.014 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:03:04.188 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:03:01 KST 2019]; root of context hierarchy
+[WARN ] 17:03:04.214 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:03:04.239 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:03:04.240 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:03:04.243 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:03:04.244 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:03:04.244 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:03:04.244 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:03:04.245 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:03:04.245 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:03:04.245 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:03:04.246 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:03:04.247 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:03:04.247 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:03:04.247 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:03:04.247 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:03:04.247 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:03:04.249 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:03:04.250 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:03:04.271 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:03:04.271 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:03:04.283 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:03:04.305 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:03:04.473 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:03:04.474 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:03:04.479 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:03:04.487 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:03:04.509 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:03:04.517 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:03:04.520 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.147 seconds (JVM running for 3.646)
+[INFO ] 17:03:09.035 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:03:09.035 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:03:09.047 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+[INFO ] 17:03:09.089 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:08:47.861 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:03:01 KST 2019]; root of context hierarchy
+[INFO ] 17:08:47.862 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:08:47.862 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:08:47.863 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:08:47.864 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:08:47.865 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:08:50.386 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 44281 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:08:50.390 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:08:50.441 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1189dd52: startup date [Tue Oct 08 17:08:50 KST 2019]; root of context hierarchy
+[INFO ] 17:08:51.289 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e4d1dcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.316 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$9d163da7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.328 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.330 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.341 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.342 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$affd6845] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.374 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:08:51.582 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:08:51.594 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:08:51.601 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:08:51.601 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:08:51.604 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:08:51.692 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:08:51.693 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1252 ms
+[INFO ] 17:08:51.803 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:08:51.806 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:08:51.807 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:08:51.807 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:08:51.807 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:08:51.834 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:08:51.951 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:08:51.962 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:08:52.005 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:08:52.006 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:08:52.031 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:08:52.167 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:08:52.237 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:08:52.245 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:08:52.623 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:08:52.632 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:08:52.961 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:08:53.172 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1189dd52: startup date [Tue Oct 08 17:08:50 KST 2019]; root of context hierarchy
+[WARN ] 17:08:53.203 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:08:53.230 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:08:53.231 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:08:53.234 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:08:53.235 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:08:53.235 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:08:53.235 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:08:53.236 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:08:53.236 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:08:53.236 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:08:53.237 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:08:53.238 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:08:53.238 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:08:53.238 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:08:53.238 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:08:53.239 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:08:53.241 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:08:53.241 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:08:53.277 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:08:53.277 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:08:53.290 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:08:53.309 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:08:53.494 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:08:53.496 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:08:53.500 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:08:53.509 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:08:53.531 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:08:53.540 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:08:53.544 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.411 seconds (JVM running for 4.102)
+[INFO ] 17:08:54.583 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:08:54.583 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:08:54.595 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+[INFO ] 17:08:57.851 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:09:37.514 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1189dd52: startup date [Tue Oct 08 17:08:50 KST 2019]; root of context hierarchy
+[INFO ] 17:09:37.516 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:09:37.516 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:09:37.517 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:09:37.518 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:09:37.519 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:09:39.854 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 44434 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:09:39.857 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:09:39.890 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72d1ad2e: startup date [Tue Oct 08 17:09:39 KST 2019]; root of context hierarchy
+[INFO ] 17:09:40.678 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ee940d7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.703 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$6d5d2d54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.714 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.717 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.727 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.729 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$804457f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.762 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:09:40.919 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:09:40.928 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:09:40.933 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:09:40.934 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:09:40.937 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:09:40.995 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:09:40.995 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1105 ms
+[INFO ] 17:09:41.088 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:09:41.091 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:09:41.091 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:09:41.091 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:09:41.091 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:09:41.113 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:09:41.230 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:09:41.240 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:09:41.335 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:09:41.336 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:09:41.362 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:09:41.443 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:09:41.513 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:09:41.522 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:09:41.884 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:09:41.891 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:09:42.245 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:09:42.392 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72d1ad2e: startup date [Tue Oct 08 17:09:39 KST 2019]; root of context hierarchy
+[WARN ] 17:09:42.413 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:09:42.431 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:09:42.432 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:09:42.435 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:09:42.435 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:09:42.435 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:09:42.435 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:09:42.436 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:09:42.436 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:09:42.436 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:09:42.437 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:09:42.437 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:09:42.437 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:09:42.438 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:09:42.438 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:09:42.438 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:09:42.440 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:09:42.440 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:09:42.458 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:09:42.458 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:09:42.469 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:09:42.487 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:09:42.646 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:09:42.647 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:09:42.651 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:09:42.658 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:09:42.679 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:09:42.686 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:09:42.689 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.054 seconds (JVM running for 3.564)
+[INFO ] 17:09:51.537 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:09:51.537 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:09:51.550 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+[INFO ] 17:09:53.616 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:09:57.654 c.interceptor.AdminInterceptor - -------------------------log-----------------------------
+[INFO ] 17:09:57.672 c.interceptor.AdminInterceptor - session info: null
+[INFO ] 17:11:27.848 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72d1ad2e: startup date [Tue Oct 08 17:09:39 KST 2019]; root of context hierarchy
+[INFO ] 17:11:27.849 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:11:27.850 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:11:27.851 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:11:27.851 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:11:27.852 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 17:11:30.187 codesquad.BaeminchanApplication - Starting BaeminchanApplication on Bellrootui-MacBookPro.local with PID 44699 (/Users/bellroot/Documents/git/baeminchan/target/classes started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 17:11:30.189 codesquad.BaeminchanApplication - The following profiles are active: local,console-logging
+[INFO ] 17:11:30.224 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:11:30 KST 2019]; root of context hierarchy
+[INFO ] 17:11:31.096 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45f26619] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.124 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$c4bb85f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.136 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.139 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.151 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.153 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$d7a2b091] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.187 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 17:11:31.365 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 17:11:31.375 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:11:31.381 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 17:11:31.381 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 17:11:31.384 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 17:11:31.444 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 17:11:31.444 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1221 ms
+[INFO ] 17:11:31.545 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 17:11:31.548 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 17:11:31.549 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 17:11:31.549 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 17:11:31.549 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 17:11:31.578 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 17:11:31.724 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:11:31.734 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 17:11:31.833 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 17:11:31.834 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 17:11:31.860 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 17:11:31.937 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 17:11:32.000 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 17:11:32.009 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 17:11:32.400 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 17:11:32.408 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:11:32.778 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:11:32.928 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:11:30 KST 2019]; root of context hierarchy
+[WARN ] 17:11:32.949 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 17:11:32.968 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 17:11:32.968 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 17:11:32.971 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 17:11:32.971 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 17:11:32.971 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 17:11:32.971 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 17:11:32.972 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 17:11:32.972 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 17:11:32.972 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 17:11:32.973 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 17:11:32.973 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 17:11:32.974 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 17:11:32.974 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 17:11:32.974 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 17:11:32.974 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 17:11:32.976 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 17:11:32.976 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 17:11:32.994 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:11:32.995 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 17:11:33.005 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 17:11:33.025 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 17:11:33.193 o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+[INFO ] 17:11:33.194 o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+[INFO ] 17:11:33.199 o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+[INFO ] 17:11:33.208 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 17:11:33.229 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 17:11:33.237 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 17:11:33.240 codesquad.BaeminchanApplication - Started BaeminchanApplication in 3.288 seconds (JVM running for 3.791)
+[INFO ] 17:11:34.553 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 17:11:34.553 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 17:11:34.567 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+[INFO ] 17:11:34.612 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 17:13:01.163 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@16293aa2: startup date [Tue Oct 08 17:11:30 KST 2019]; root of context hierarchy
+[INFO ] 17:13:01.164 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+[INFO ] 17:13:01.165 o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+[INFO ] 17:13:01.165 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 17:13:01.166 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 17:13:01.167 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

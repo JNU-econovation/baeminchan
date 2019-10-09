@@ -15,19 +15,24 @@ public class HomeController {
 
     private final PromotionService promotionService;
 
-    @GetMapping("/join")
-    public String joinForm() {
+    @GetMapping("/member/join")
+    public String joinForm_another() {
         return "/join";
     }
 
-    @GetMapping("/member/join")
-    public String joinForm_another() {
-        return "redirect:/join";
+    @GetMapping("/member/login")
+    public String loginForm() {
+        return "login";
     }
 
-    @GetMapping("/login")
-    public String loginForm() {
-        return "/login";
+    @GetMapping("/member/find")
+    public String findIdForm() {
+        return "/find-id";
+    }
+
+    @GetMapping("/member/find-pass")
+    public String findPasswordForm() {
+        return "/find-password";
     }
 
     @GetMapping("/")
