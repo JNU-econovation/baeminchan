@@ -96,6 +96,7 @@ let fourthDot = dots.item(3);
 let fifthDot = dots.item(4);
 let el = document.querySelector(".img-box");
 
+
 firstDot.addEventListener("click", function () {
     el.style.transform = "translateX(0%)";
     document.querySelector(".dot-btn-box > .dot.on").className = "dot";
