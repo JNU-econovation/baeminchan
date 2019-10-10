@@ -2,7 +2,6 @@ package codesquad.web;
 
 import codesquad.domain.Category;
 import codesquad.dto.CategoryDTO;
-import codesquad.response.ResponseGenerator;
 import codesquad.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
