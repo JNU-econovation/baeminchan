@@ -1,10 +1,8 @@
 package codesquad.web;
 
-import codesquad.domain.Account;
+import codesquad.AcceptanceTest;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
-import codesquad.exception.NotFoundAccountException;
-import lombok.RequiredArgsConstructor;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import codesquad.AcceptanceTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

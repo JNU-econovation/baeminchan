@@ -1,11 +1,13 @@
 package codesquad.dto;
 
+import codesquad.utils.RegexUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 @Getter
 @Setter
@@ -19,6 +21,6 @@ public class FindingPasswordDTO {
     @NotBlank
     String name;
 
-    @NotBlank
+    @Pattern(regexp = RegexUtil.REGEX_PHONE_NUMBER)
     String phoneNumber;
 }
