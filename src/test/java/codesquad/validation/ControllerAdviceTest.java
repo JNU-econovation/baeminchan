@@ -1,15 +1,13 @@
 package codesquad.validation;
 
+import codesquad.AcceptanceTest;
 import codesquad.dto.ErrorResponse;
 import codesquad.dto.SignUpDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import codesquad.AcceptanceTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,6 +22,6 @@ public class ControllerAdviceTest extends AcceptanceTest {
 
         ResponseEntity<ErrorResponse> response = template().postForEntity("/member/sign-up", signUpFalse, ErrorResponse.class);
 
-        assertThat(response.toString()).isEqualTo("");
+        assertThat(response.toString()).contains("비밀번호 형식이 올바르지 않습니다.");
     }
 }

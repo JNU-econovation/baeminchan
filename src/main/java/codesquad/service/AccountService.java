@@ -2,13 +2,14 @@ package codesquad.service;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.FindingEmailDTO;
+import codesquad.dto.FindingPasswordDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
-import codesquad.exception.DuplicatedAccountException;
-import codesquad.exception.NotFoundAccountException;
-import codesquad.exception.UnAuthenticationException;
-import codesquad.exception.UnMatchedCheckingPasswordException;
-import codesquad.utils.SessionUtil;
+import codesquad.exception.*;
+import codesquad.sequrity.HttpSessionUtils;
+import codesquad.sequrity.RandomPasswordGenerator;
+import codesquad.utils.ExceptionMessages;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +48,15 @@ public class AccountService {
         Account account = findByEmail(loginDTO.getEmail());
 
         matchPassword(loginDTO.getPassword(), account.getPassword());
-        session.setAttribute(SessionUtil.SESSIONED_USER, account);
+        session.setAttribute(HttpSessionUtils.SESSIONED_USER, account);
+
+        return account;
+    }
+
+    public Account login(LoginDTO loginDTO) {
+        Account account = findByEmail(loginDTO.getEmail());
+
+        matchPassword(loginDTO.getPassword(), account.getPassword());
 
         return account;
     }
@@ -56,5 +65,34 @@ public class AccountService {
         if (!passwordEncoder.matches(requestPassword, actualPassword)) {
             throw new UnAuthenticationException();
         }
+    }
+
+    public String findId(FindingEmailDTO findingIdDTO) {
+        Account account = accountRepository.findByName(findingIdDTO.getName())
+                .orElseThrow(() -> new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO));
+
+        if (!account.hasSamePhoneNumber(findingIdDTO.getPhoneNumber())) {
+            throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
+        }
+
+        return account.getEmail();
+    }
+
+    public String findPassword(FindingPasswordDTO findingPasswordDTO) {
+        Account account = accountRepository.findByEmail(findingPasswordDTO.getEmail())
+                .orElseThrow(() -> new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO));
+
+        if (!account.hasSameName(findingPasswordDTO.getName()) || !account.hasSamePhoneNumber(findingPasswordDTO.getPhoneNumber())) {
+            throw new NotFoundAccountException(ExceptionMessages.NO_ACCOUNT_WITH_SUCH_INFO);
+        }
+
+        String newPassword = RandomPasswordGenerator.generatePassword();
+
+
+
+        account.setPassword(passwordEncoder.encode(newPassword));
+        accountRepository.save(account);
+
+        return newPassword;
     }
 }

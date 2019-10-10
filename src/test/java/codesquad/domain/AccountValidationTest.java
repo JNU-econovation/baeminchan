@@ -62,7 +62,7 @@ public class AccountValidationTest {
     public void signUp_when_phoneNumber_isEmpty() {
         SignUpDTO signUpDTO = new SignUpDTO("bell@gmail.com", "password12", "password12", "", "name");
         Set<ConstraintViolation<SignUpDTO>> constraintViolations = validator.validate(signUpDTO);
-        assertThat(constraintViolations.size()).isEqualTo(2);
+        assertThat(constraintViolations.size()).isEqualTo(1);
 
         for (ConstraintViolation<SignUpDTO> constraintViolation : constraintViolations) {
             log.debug("violation error message : {}", constraintViolation.getMessage());

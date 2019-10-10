@@ -284,7 +284,7 @@ function checkLoginForm() {
         'Content-Type': 'application/json;charset=UTF-8'
     });
 
-    fetch('/member/login', {
+    fetch('/member/sign-in', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
@@ -327,6 +327,118 @@ function checkLoginForm() {
     }).catch(err => {
         console.log("oops..", err)
     })
+}
+
+function findId() {
+    const name = $('#name').value;
+    const phoneNumber = $('#cell1').value + '-' + $('#cell2').value + '-' + $('#cell3').value;
+
+    const headers = new Headers({
+        'Accept': 'application/json;charset=UTF-8',
+        'Content-Type': 'application/json;charset=UTF-8'
+    });
+
+    fetch('/member/find/request', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+            'name': name,
+            'phoneNumber': phoneNumber
+        })
+    }).then((response) => {
+        const data = response.text();
+        console.log(data);
+
+        return data.then(result => {
+            return {
+                'result': result,
+                'status': response.status
+            }
+        })
+    }).then(({result, status}) => {
+        if (status >= 400) {
+            result = JSON.parse(result);
+            console.log('error 가 발생했네요 ', result.status);
+            console.log(result);
+
+            if (result.errors != null) {
+                let log = "";
+
+                for (let i = 0; i < result.errors.length; i++) {
+                    log += result.errors[i].errorMessage + "\n";
+                }
+
+                alert(log);
+            } else {
+                alert(result.message);
+            }
+
+        } else {
+            let log = "그만좀 까묵어요 \n 아이디: ";
+            log += result;
+
+            alert(log);
+        }
+    }).catch(err => {
+        console.log("oops..", err)
+    });
+}
+
+function findPassword() {
+    const email = $('#email_id').value + '@' + $('#email_domain').value;
+    const name = $('#name').value;
+    const phoneNumber = $('#cell1').value + '-' + $('#cell2').value + '-' + $('#cell3').value;
+
+    const headers = new Headers({
+        'Accept': 'application/json;charset=UTF-8',
+        'Content-Type': 'application/json;charset=UTF-8'
+    });
+
+    fetch('/member/find-pass/request', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+            'email': email,
+            'name': name,
+            'phoneNumber': phoneNumber
+        })
+    }).then((response) => {
+        const data = response.text();
+        console.log(data);
+
+        return data.then(result => {
+            return {
+                'result': result,
+                'status': response.status
+            }
+        })
+    }).then(({result, status}) => {
+        if (status >= 400) {
+            result = JSON.parse(result);
+            console.log('error 가 발생했네요 ', result.status);
+            console.log(result);
+
+            if (result.errors != null) {
+                let log = "";
+
+                for (let i = 0; i < result.errors.length; i++) {
+                    log += result.errors[i].errorMessage + "\n";
+                }
+
+                alert(log);
+            } else {
+                alert(result.message);
+            }
+
+        } else {
+            let log = "그만좀 까묵어요 \n 임시비밀번호: ";
+            log += result;
+
+            alert(log);
+        }
+    }).catch(err => {
+        console.log("oops..", err)
+    });
 }
 
 function redirectPage(path) {

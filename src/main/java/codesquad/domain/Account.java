@@ -11,6 +11,7 @@ import static codesquad.domain.AccountType.ADMIN;
 import static codesquad.domain.AccountType.USER;
 
 @Entity
+@Table(name = "account")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,7 +28,7 @@ public class Account {
     @Column(nullable = false, name = "password")
     private String password;
 
-    @Column(nullable = false, name = "name")
+    @Column(nullable = false, name = "user_name")
     private String name;
 
     @Column(nullable = false, name = "phone_number")
@@ -105,5 +106,13 @@ public class Account {
 
     public boolean isAdmin() {
         return this.accountType.equals(ADMIN);
+    }
+
+    public boolean hasSamePhoneNumber(String phoneNumber) {
+        return this.phoneNumber.equals(phoneNumber);
+    }
+
+    public boolean hasSameName(String name) {
+        return this.name.equals(name);
     }
 }
