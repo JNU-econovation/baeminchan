@@ -284,7 +284,7 @@ function checkLoginForm() {
         'Content-Type': 'application/json;charset=UTF-8'
     });
 
-    fetch('/member/login', {
+    fetch('/member/sign-in', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
