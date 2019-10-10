@@ -5,7 +5,7 @@
 
 	<groupId>kr.codesquad</groupId>
 	<artifactId>baeminchan</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>baeminchan</name>
@@ -75,7 +75,12 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.0</version>
-			<scope>provided</scope>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>

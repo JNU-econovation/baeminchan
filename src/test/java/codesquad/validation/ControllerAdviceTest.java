@@ -26,4 +26,29 @@ public class ControllerAdviceTest extends AcceptanceTest {
 
         assertThat(response.toString()).contains("비밀번호 형식이 올바르지 않습니다.");
     }
+
+    @Test
+    public void findIdFail_when_empty() {
+
+    }
+
+    @Test
+    public void findIdFail_when_no_exist_user() {
+
+    }
+
+    @Test
+    public void findPasswordFail() {
+
+    }
+
+    @Test
+    public void findPasswordFail_when_no_exist_user() {
+
+    }
+
+    @Test
+    public void findPasswordFail_when_incorrect_info() {
+
+    }
 }

@@ -2,6 +2,8 @@ package codesquad.service;
 
 import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
+import codesquad.dto.FindingEmailDTO;
+import codesquad.dto.FindingPasswordDTO;
 import codesquad.dto.LoginDTO;
 import codesquad.dto.SignUpDTO;
 import codesquad.exception.NotFoundAccountException;
@@ -77,6 +79,22 @@ public class AccountServiceTest {
         when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.of(account));
 
         assertThat(accountService.findByEmail(EMAIL).getEmail()).isEqualTo(EMAIL);
+    }
+
+    @Test
+    public void findIdByName() {
+        when(accountRepository.findByName(NAME)).thenReturn(Optional.ofNullable(account));
+        FindingEmailDTO findingIdDTO = new FindingEmailDTO(NAME, PHONE_NUMBER);
+
+        assertThat(accountService.findId(findingIdDTO)).isEqualTo(EMAIL);
+    }
+
+    @Test
+    public void findPassword() {
+        when(accountRepository.findByEmail(EMAIL)).thenReturn(Optional.ofNullable(account));
+        FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO(EMAIL, NAME, PHONE_NUMBER);
+
+        assertThat(accountService.findPassword(findingPasswordDTO).length()).isEqualTo(8);
     }
 
     @Test

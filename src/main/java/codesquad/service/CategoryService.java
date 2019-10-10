@@ -4,6 +4,7 @@ import codesquad.domain.Category;
 import codesquad.domain.CategoryRepository;
 import codesquad.dto.CategoryDTO;
 import codesquad.exception.NotFoundCategoryException;
+import com.sun.tools.internal.xjc.model.CAttributePropertyInfo;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -84,5 +85,13 @@ public class CategoryService {
 
         return categoryList.stream()
                 .filter(category -> !category.isDeleted()).collect(Collectors.toList());
+    }
+
+    public List<Category> findParentList() {
+        List<Category> parentCategoryList = categoryRepository.findAll().stream()
+                .filter(category -> !category.hasParent())
+                .filter(category -> !category.isDeleted()).collect(Collectors.toList());
+
+        return parentCategoryList;
     }
 }

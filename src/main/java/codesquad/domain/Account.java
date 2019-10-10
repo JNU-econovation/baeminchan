@@ -107,4 +107,12 @@ public class Account {
     public boolean isAdmin() {
         return this.accountType.equals(ADMIN);
     }
+
+    public boolean hasSamePhoneNumber(String phoneNumber) {
+        return this.phoneNumber.equals(phoneNumber);
+    }
+
+    public boolean hasSameName(String name) {
+        return this.name.equals(name);
+    }
 }
