@@ -86,3 +86,49 @@ sidePrevButton.addEventListener("click", function () {
         }
     }
 });
+
+
+let dots = document.querySelectorAll(".dot-btn-box > .dot");
+let firstDot = dots.item(0);
+let secondDot = dots.item(1);
+let thirdDot = dots.item(2);
+let fourthDot = dots.item(3);
+let fifthDot = dots.item(4);
+let el = document.querySelector(".img-box");
+
+firstDot.addEventListener("click", function () {
+    el.style.transform = "translateX(0%)";
+    document.querySelector(".dot-btn-box > .dot.on").className = "dot";
+    firstDot.className = "dot on";
+    boxIndex = 0;
+});
+
+secondDot.addEventListener("click", function () {
+    el.style.transform = "translateX(-100%)";
+    document.querySelector(".dot-btn-box > .dot.on").className = "dot";
+    secondDot.className = "dot on";
+    boxIndex = 1;
+});
+
+thirdDot.addEventListener("click", function () {
+    el.style.transform = "translateX(-200%)";
+    document.querySelector(".dot-btn-box > .dot.on").className = "dot";
+    thirdDot.className = "dot on";
+    boxIndex = 2;
+});
+
+fourthDot.addEventListener("click", function () {
+    el.style.transform = "translateX(-300%)";
+    document.querySelector(".dot-btn-box > .dot.on").className = "dot";
+    fourthDot.className = "dot on";
+    boxIndex = 3;
+});
+
+fifthDot.addEventListener("click", function () {
+    el.style.transform = "translateX(-400%)";
+    document.querySelector(".dot-btn-box > .dot.on").className = "dot";
+    fifthDot.className = "dot on";
+    boxIndex = 4;
+});
+
+
