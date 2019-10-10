@@ -52,7 +52,7 @@ public class ApiAccountController {
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        return new ResponseEntity<>(headers, HttpStatus.FOUND);
+        return new ResponseEntity<>(foundId, headers, HttpStatus.FOUND);
     }
 
     @PostMapping("/member/find-pass/request")

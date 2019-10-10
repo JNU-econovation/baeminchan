@@ -69,7 +69,7 @@ public class AccountAcceptanceTest extends AcceptanceTest {
         FindingPasswordDTO findingPasswordDTO = new FindingPasswordDTO("user@gmail.com", "user", "010-0000-1111");
 
         ResponseEntity<String> response = template().postForEntity("/member/find-pass/request", findingPasswordDTO, String.class);
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
     }
 
     @Test
