@@ -38,41 +38,15 @@ public abstract class AcceptanceTest {
     }
 
     protected Account defaultUser() {
-        createDefaultUser();
 
         return findByEmailId(DEFAULT_LOGIN_USER);
     }
 
     protected Account adminAccount() {
-        createAdminAccount();
 
         return findByEmailId(ADMIN_LOGIN_USER);
     }
 
-    private void createDefaultUser() {
-        Account account = new Account()
-                .setEmail(DEFAULT_LOGIN_USER)
-                .setName("bell")
-                .setPassword("1111aaaa")
-                .setPhoneNumber("010-0000-0000")
-                .build();
-
-        log.info("defaultUser: {}", account.toString());
-        accountRepository.save(account);
-    }
-
-    private void createAdminAccount() {
-        Account account = new Account()
-                .setEmail(ADMIN_LOGIN_USER)
-                .setName("admin")
-                .setPassword("1111aaaa")
-                .setPhoneNumber("010-0000-0001")
-                .changeToAdmin()
-                .build();
-
-        accountRepository.deleteAll();
-        accountRepository.save(account);
-    }
 
     protected Account findByEmailId(String accountId) {
         log.info("email: {}", accountId);

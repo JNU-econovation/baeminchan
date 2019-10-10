@@ -4163,3 +4163,719 @@ codesquad.exception.UnAuthenticationException: 비밀번호가 올바르지 않�
 [INFO ] 01:54:42.440 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 [INFO ] 01:54:42.441 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 [INFO ] 01:54:42.443 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 02:06:25.350 o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [codesquad.web.AccountAcceptanceTest], using SpringBootContextLoader
+[INFO ] 02:06:25.356 o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [codesquad.web.AccountAcceptanceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 02:06:25.356 o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [codesquad.web.AccountAcceptanceTest]: AccountAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 02:06:25.497 o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration codesquad.BaeminchanApplication for test class codesquad.web.AccountAcceptanceTest
+[INFO ] 02:06:25.633 o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 02:06:25.652 o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3e84448c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a7f959b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@429bffaa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5403f35f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@483f6d77, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e5afaa6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63a12c68, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28f3b248, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1b1426f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@32b260fa, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@581ac8a8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6d4e5011]
+[INFO ] 02:06:25.984 codesquad.web.AccountAcceptanceTest - Starting AccountAcceptanceTest on Bellrootui-MacBookPro.local with PID 39083 (started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 02:06:25.984 codesquad.web.AccountAcceptanceTest - The following profiles are active: test
+[INFO ] 02:06:26.010 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35b74c5c: startup date [Fri Oct 11 02:06:26 KST 2019]; root of context hierarchy
+[INFO ] 02:06:27.135 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$10aa4fc3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.190 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$8f736f9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.213 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.217 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.237 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.239 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$a25a9a3b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.320 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:27.648 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+[INFO ] 02:06:27.663 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:27.674 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 02:06:27.675 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 02:06:27.684 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 02:06:27.776 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 02:06:27.776 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1766 ms
+[INFO ] 02:06:27.894 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 02:06:27.898 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 02:06:27.899 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 02:06:27.899 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 02:06:27.899 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 02:06:27.935 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 02:06:28.057 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 02:06:28.223 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 02:06:28.268 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:28.284 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 02:06:28.352 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 02:06:28.354 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 02:06:28.402 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 02:06:28.515 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 02:06:29.002 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 02:06:29.021 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:29.438 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:29.654 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35b74c5c: startup date [Fri Oct 11 02:06:26 KST 2019]; root of context hierarchy
+[WARN ] 02:06:29.694 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 02:06:29.720 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findId(codesquad.dto.FindingEmailDTO)
+[INFO ] 02:06:29.721 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-in],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 02:06:29.721 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findPassword(codesquad.dto.FindingPasswordDTO)
+[INFO ] 02:06:29.722 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 02:06:29.725 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 02:06:29.726 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 02:06:29.726 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 02:06:29.726 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 02:06:29.726 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 02:06:29.727 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 02:06:29.727 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 02:06:29.728 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 02:06:29.728 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 02:06:29.729 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 02:06:29.729 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 02:06:29.729 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 02:06:29.729 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 02:06:29.729 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/side-dishs],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.sideDishs()
+[INFO ] 02:06:29.731 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 02:06:29.731 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 02:06:29.751 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:29.752 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:29.763 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 02:06:29.789 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 02:06:30.101 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:30.121 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 02:06:30.132 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 54128 (http) with context path ''
+[INFO ] 02:06:30.136 codesquad.web.AccountAcceptanceTest - Started AccountAcceptanceTest in 4.431 seconds (JVM running for 5.31)
+[INFO ] 02:06:30.332 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 02:06:30.332 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 02:06:30.348 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+[INFO ] 02:06:30.461 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[ERROR] 02:06:30.582 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 해당 정보로 등록된 아이디가 존재하지 않습니다
+	at codesquad.service.AccountService.findPassword(AccountService.java:86)
+	at codesquad.web.ApiAccountController.findPassword(ApiAccountController.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 02:06:30.659 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 해당 정보로 등록된 아이디가 존재하지 않습니다
+	at codesquad.service.AccountService.lambda$findPassword$1(AccountService.java:83)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at codesquad.service.AccountService.findPassword(AccountService.java:83)
+	at codesquad.web.ApiAccountController.findPassword(ApiAccountController.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 02:06:31.046 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 해당 정보로 등록된 아이디가 존재하지 않습니다
+	at codesquad.service.AccountService.lambda$findId$0(AccountService.java:72)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at codesquad.service.AccountService.findId(AccountService.java:72)
+	at codesquad.web.ApiAccountController.findId(ApiAccountController.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 02:06:31.057 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 해당 정보로 등록된 아이디가 존재하지 않습니다
+	at codesquad.service.AccountService.findId(AccountService.java:75)
+	at codesquad.web.ApiAccountController.findId(ApiAccountController.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 02:06:31.067 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 해당 정보로 등록된 아이디가 존재하지 않습니다
+	at codesquad.service.AccountService.findPassword(AccountService.java:86)
+	at codesquad.web.ApiAccountController.findPassword(ApiAccountController.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 02:06:31.071 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35b74c5c: startup date [Fri Oct 11 02:06:26 KST 2019]; root of context hierarchy
+[INFO ] 02:06:31.075 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:31.076 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 02:06:31.077 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 02:06:36.289 o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [codesquad.web.AdminAcceptanceTest], using SpringBootContextLoader
+[INFO ] 02:06:36.294 o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [codesquad.web.AdminAcceptanceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 02:06:36.295 o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [codesquad.web.AdminAcceptanceTest]: AdminAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 02:06:36.469 o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration codesquad.BaeminchanApplication for test class codesquad.web.AdminAcceptanceTest
+[INFO ] 02:06:36.640 o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 02:06:36.658 o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1b1426f4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@32b260fa, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@581ac8a8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d4e5011, org.springframework.test.context.support.DirtiesContextTestExecutionListener@57d7f8ca, org.springframework.test.context.transaction.TransactionalTestExecutionListener@76c3e77a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@78123e82, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@67c33749, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@fba92d3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@fa49800, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@71238fc2]
+[INFO ] 02:06:37.021 codesquad.web.AdminAcceptanceTest - Starting AdminAcceptanceTest on Bellrootui-MacBookPro.local with PID 39116 (started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 02:06:37.022 codesquad.web.AdminAcceptanceTest - The following profiles are active: test
+[INFO ] 02:06:37.069 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e38ce1: startup date [Fri Oct 11 02:06:37 KST 2019]; root of context hierarchy
+[INFO ] 02:06:38.232 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c84de93b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.274 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$47170915] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.291 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.296 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.310 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.312 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$59fe33b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.385 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:38.661 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+[INFO ] 02:06:38.673 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:38.682 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 02:06:38.682 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 02:06:38.691 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 02:06:38.778 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 02:06:38.778 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1709 ms
+[INFO ] 02:06:38.878 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 02:06:38.881 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 02:06:38.881 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 02:06:38.881 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 02:06:38.882 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 02:06:38.914 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 02:06:39.022 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 02:06:39.176 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 02:06:39.222 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:39.242 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 02:06:39.324 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 02:06:39.325 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 02:06:39.371 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 02:06:39.544 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 02:06:40.189 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 02:06:40.212 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:40.780 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:41.057 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e38ce1: startup date [Fri Oct 11 02:06:37 KST 2019]; root of context hierarchy
+[WARN ] 02:06:41.102 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 02:06:41.136 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 02:06:41.137 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-in],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 02:06:41.137 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findId(codesquad.dto.FindingEmailDTO)
+[INFO ] 02:06:41.138 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findPassword(codesquad.dto.FindingPasswordDTO)
+[INFO ] 02:06:41.141 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 02:06:41.142 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 02:06:41.142 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 02:06:41.143 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 02:06:41.143 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 02:06:41.144 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 02:06:41.144 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 02:06:41.145 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/side-dishs],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.sideDishs()
+[INFO ] 02:06:41.146 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 02:06:41.148 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 02:06:41.149 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 02:06:41.172 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:41.173 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:41.188 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 02:06:41.249 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 02:06:41.704 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:41.730 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 02:06:41.744 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 54186 (http) with context path ''
+[INFO ] 02:06:41.748 codesquad.web.AdminAcceptanceTest - Started AdminAcceptanceTest in 5.034 seconds (JVM running for 6.018)
+[INFO ] 02:06:41.830 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:41.859 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 02:06:41.979 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.018 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.020 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.022 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.024 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.171 codesquad.web.AdminAcceptanceTest - categoryDB: [codesquad.domain.Category@5d58dc61]
+[INFO ] 02:06:42.277 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 02:06:42.278 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 02:06:42.297 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+[INFO ] 02:06:42.505 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.507 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.509 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.511 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.512 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.514 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.518 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.520 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.521 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.523 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.525 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.527 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.531 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.533 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.535 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.537 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.538 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.540 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.545 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.547 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.549 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.551 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.553 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.554 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.697 codesquad.web.ApiAccountController - dto.parent: CategoryDTO{title='pizza', parentId=null}
+[INFO ] 02:06:42.708 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.710 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.711 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.713 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.715 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.716 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.721 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.722 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.724 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.726 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.727 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.728 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.732 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.734 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.736 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.738 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.739 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.740 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.744 codesquad.AcceptanceTest - email: admin@gmail.com
+[INFO ] 02:06:42.746 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.748 codesquad.AcceptanceTest - dbAccount: Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}
+[INFO ] 02:06:42.750 codesquad.AcceptanceTest - email: user@gmail.com
+[INFO ] 02:06:42.751 codesquad.AcceptanceTest - accountDB1: [Account{id=99, email='admin@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='admin', phoneNumber='010-0000-0000', accountType=ADMIN}, Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}]
+[INFO ] 02:06:42.753 codesquad.AcceptanceTest - dbAccount: Account{id=100, email='user@gmail.com', password='$2a$10$i1jipaZ9r07F21OdMVS6ZO/.0gW1dxtzrsEI2BemA69UOJuGXzYgG', name='user', phoneNumber='010-0000-1111', accountType=USER}
+[INFO ] 02:06:42.968 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@70e38ce1: startup date [Fri Oct 11 02:06:37 KST 2019]; root of context hierarchy
+[INFO ] 02:06:42.970 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:42.971 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 02:06:42.972 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 02:06:46.410 o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [codesquad.web.LoginAcceptanceTest], using SpringBootContextLoader
+[INFO ] 02:06:46.416 o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [codesquad.web.LoginAcceptanceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 02:06:46.417 o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [codesquad.web.LoginAcceptanceTest]: LoginAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 02:06:46.559 o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration codesquad.BaeminchanApplication for test class codesquad.web.LoginAcceptanceTest
+[INFO ] 02:06:46.674 o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 02:06:46.689 o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@63a12c68, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@28f3b248, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b1426f4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@32b260fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@581ac8a8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6d4e5011, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@57d7f8ca, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76c3e77a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78123e82, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@67c33749, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@fba92d3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@662b4c69]
+[INFO ] 02:06:47.000 codesquad.web.LoginAcceptanceTest - Starting LoginAcceptanceTest on Bellrootui-MacBookPro.local with PID 39152 (started by bellroot in /Users/bellroot/Documents/git/baeminchan)
+[INFO ] 02:06:47.000 codesquad.web.LoginAcceptanceTest - The following profiles are active: test
+[INFO ] 02:06:47.023 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ca26d77: startup date [Fri Oct 11 02:06:47 KST 2019]; root of context hierarchy
+[INFO ] 02:06:48.109 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73aaa42e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.157 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$f273c408] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.178 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.context.properties.ConversionServiceDeducer$Factory' of type [org.springframework.boot.context.properties.ConversionServiceDeducer$Factory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.183 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.203 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.205 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$55aeea6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.311 o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 02:06:48.689 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+[INFO ] 02:06:48.704 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:48.715 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 02:06:48.715 o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+[INFO ] 02:06:48.724 o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/bellroot/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+[INFO ] 02:06:48.823 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 02:06:48.824 o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1801 ms
+[INFO ] 02:06:48.951 o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+[INFO ] 02:06:48.955 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+[INFO ] 02:06:48.956 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[INFO ] 02:06:48.956 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[INFO ] 02:06:48.956 o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+[INFO ] 02:06:48.999 n.r.s.b.l.a.LogbackAccessContext - Configured the Logback-access: context=[default], config=[classpath:net/rakugakibox/spring/boot/logback/access/logback-access-spring.xml]
+[INFO ] 02:06:49.139 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 02:06:49.330 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 02:06:49.381 o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:49.399 o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[INFO ] 02:06:49.465 org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+[INFO ] 02:06:49.466 org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+[INFO ] 02:06:49.513 o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 02:06:49.627 org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 02:06:50.103 o.h.t.s.internal.SchemaCreatorImpl - HHH000476: Executing import script 'ScriptSourceInputFromUrl(file:/Users/bellroot/Documents/git/baeminchan/target/classes/import.sql)'
+[INFO ] 02:06:50.122 o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:50.581 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:50.817 o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ca26d77: startup date [Fri Oct 11 02:06:47 KST 2019]; root of context hierarchy
+[WARN ] 02:06:50.859 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 02:06:50.885 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-in],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.login(javax.servlet.http.HttpSession,codesquad.dto.LoginDTO)
+[INFO ] 02:06:50.886 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findId(codesquad.dto.FindingEmailDTO)
+[INFO ] 02:06:50.886 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass/request],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> codesquad.web.ApiAccountController.findPassword(codesquad.dto.FindingPasswordDTO)
+[INFO ] 02:06:50.886 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/sign-up],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiAccountController.createAccount(codesquad.dto.SignUpDTO)
+[INFO ] 02:06:50.891 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/search],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<codesquad.domain.Category>> codesquad.web.ApiCategoryController.showCategoryList()
+[INFO ] 02:06:50.891 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.categoryDetailPage(java.lang.Long)
+[INFO ] 02:06:50.891 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/create],methods=[POST]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.createCategory(codesquad.dto.CategoryDTO)
+[INFO ] 02:06:50.892 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/update],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<codesquad.domain.Category> codesquad.web.ApiCategoryController.updateCategory(java.lang.Long,codesquad.dto.CategoryDTO)
+[INFO ] 02:06:50.892 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category/{id}/delete],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> codesquad.web.ApiCategoryController.deleteCategory(java.lang.Long)
+[INFO ] 02:06:50.892 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.adminPage(org.springframework.ui.Model)
+[INFO ] 02:06:50.893 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/category],methods=[GET]}" onto public java.lang.String codesquad.web.CategoryController.categoryPage(org.springframework.ui.Model)
+[INFO ] 02:06:50.894 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.main(org.springframework.ui.Model)
+[INFO ] 02:06:50.894 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.logout(javax.servlet.http.HttpSession)
+[INFO ] 02:06:50.894 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/join],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.joinForm_another()
+[INFO ] 02:06:50.894 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/login],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.loginForm()
+[INFO ] 02:06:50.895 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findIdForm()
+[INFO ] 02:06:50.895 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/member/find-pass],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.findPasswordForm()
+[INFO ] 02:06:50.895 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/side-dishs],methods=[GET]}" onto public java.lang.String codesquad.web.HomeController.sideDishs()
+[INFO ] 02:06:50.897 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[INFO ] 02:06:50.897 o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[INFO ] 02:06:50.918 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:50.918 o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[INFO ] 02:06:50.930 o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globalExceptionControllerAdvice
+[INFO ] 02:06:50.954 o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[INFO ] 02:06:51.250 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+[INFO ] 02:06:51.268 o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+[INFO ] 02:06:51.277 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 54231 (http) with context path ''
+[INFO ] 02:06:51.280 codesquad.web.LoginAcceptanceTest - Started LoginAcceptanceTest in 4.551 seconds (JVM running for 5.409)
+[INFO ] 02:06:51.455 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[INFO ] 02:06:51.456 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+[INFO ] 02:06:51.471 o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+[INFO ] 02:06:51.592 o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[ERROR] 02:06:51.699 c.e.GlobalExceptionControllerAdvice - handleNotFoundAccountException : {}
+codesquad.exception.NotFoundAccountException: 아이디가 존재하지 않습니다.
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at codesquad.service.AccountService.findByEmail(AccountService.java:44)
+	at codesquad.service.AccountService.login(AccountService.java:48)
+	at codesquad.web.ApiAccountController.login(ApiAccountController.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 02:06:51.940 c.e.GlobalExceptionControllerAdvice - handleUnAuthenticationException : {}
+codesquad.exception.UnAuthenticationException: 비밀번호가 올바르지 않습니다.
+	at codesquad.service.AccountService.matchPassword(AccountService.java:66)
+	at codesquad.service.AccountService.login(AccountService.java:50)
+	at codesquad.web.ApiAccountController.login(ApiAccountController.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at net.rakugakibox.spring.boot.logback.access.tomcat.LogbackAccessTomcatValve.invoke(LogbackAccessTomcatValve.java:91)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 02:06:51.947 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2ca26d77: startup date [Fri Oct 11 02:06:47 KST 2019]; root of context hierarchy
+[INFO ] 02:06:51.950 o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 02:06:51.950 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 02:06:51.951 com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

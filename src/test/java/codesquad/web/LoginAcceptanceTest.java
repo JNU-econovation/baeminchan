@@ -1,7 +1,6 @@
 package codesquad.web;
 
 import codesquad.AcceptanceTest;
-import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
 import org.junit.Test;
