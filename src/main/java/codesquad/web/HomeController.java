@@ -51,6 +51,11 @@ public class HomeController {
     public String logout(HttpSession session) {
         session.removeAttribute(HttpSessionUtils.SESSIONED_USER);
 
-        return "redirect:/login";
+        return "redirect:/member/login";
+    }
+
+    @GetMapping("/side-dishs")
+    public String sideDishs() {
+        return "/preparing";
     }
 }
