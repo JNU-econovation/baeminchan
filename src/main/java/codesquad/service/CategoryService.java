@@ -4,7 +4,6 @@ import codesquad.domain.Category;
 import codesquad.domain.CategoryRepository;
 import codesquad.dto.CategoryDTO;
 import codesquad.exception.NotFoundCategoryException;
-import com.sun.tools.internal.xjc.model.CAttributePropertyInfo;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
