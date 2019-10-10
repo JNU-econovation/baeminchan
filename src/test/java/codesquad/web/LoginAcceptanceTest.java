@@ -1,6 +1,7 @@
 package codesquad.web;
 
 import codesquad.AcceptanceTest;
+import codesquad.domain.Account;
 import codesquad.domain.AccountRepository;
 import codesquad.dto.LoginDTO;
 import org.junit.Test;
@@ -22,22 +23,16 @@ public class LoginAcceptanceTest extends AcceptanceTest {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-//    @Test
-//    public void login() {
-//        String password = "abcd1234";
-//
-//        Account account = defaultUser();
-//        account.setPassword(passwordEncoder.encode(password));
-//        accountRepository.save(account);
-//
-//        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
-//
-//
-//        ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
-//
-//        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
-//        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
-//    }
+    @Test
+    public void login() {
+        String password = "1111aaaa";
+        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
+
+        ResponseEntity<Void> response = template().postForEntity("/member/sign-in", request, Void.class);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FOUND);
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
+    }
 
     @Test
     public void login_wrong_email() {
@@ -45,21 +40,21 @@ public class LoginAcceptanceTest extends AcceptanceTest {
         String password = "abcd1234";
 
         LoginDTO request = new LoginDTO(email, password);
-        ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
+        ResponseEntity<String> response = template().postForEntity("/member/sign-in", request, String.class);
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
         assertThat(accountRepository.findByEmail(email).isPresent()).isFalse();
     }
-//
-//    @Test
-//    public void login_wrong_password() {
-//        String password = "wrong_password";
-//
-//        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
-//        ResponseEntity<String> response = template().postForEntity("/member/login", request, String.class);
-//
-//        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
-//        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
-//        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).orElseThrow(RuntimeException::new).matchPassword(password));
-//    }
+
+    @Test
+    public void login_wrong_password() {
+        String password = "wrong_password";
+
+        LoginDTO request = new LoginDTO(DEFAULT_LOGIN_USER, password);
+        ResponseEntity<String> response = template().postForEntity("/member/sign-in", request, String.class);
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).isPresent()).isTrue();
+        assertThat(accountRepository.findByEmail(DEFAULT_LOGIN_USER).orElseThrow(RuntimeException::new).matchPassword(password));
+    }
 }

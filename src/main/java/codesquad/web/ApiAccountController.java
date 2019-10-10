@@ -37,7 +37,7 @@ public class ApiAccountController {
         return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
-    @PostMapping("/member/login")
+    @PostMapping("/member/sign-in")
     public ResponseEntity<Void> login(HttpSession session, @Valid @RequestBody LoginDTO loginDTO) {
         accountService.login(session, loginDTO);
 
